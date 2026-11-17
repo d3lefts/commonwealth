@@ -43,6 +43,21 @@ jobs:
             --source-ref "$source_ref"
       - name: Validate manifest and site dependency closure
         run: python3 source-research/projects/commonwealth-os/deployment/test_standalone.py "$RUNNER_TEMP/commonwealth-release"
+      - name: Verify canonical origin matches the renamed repository
+        env:
+          TARGET_SITE: ${{ env.COMMONWEALTH_ORIGIN }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib
+          expected = os.environ["TARGET_SITE"]
+          manifest = json.loads((pathlib.Path(os.environ["RUNNER_TEMP"]) / "commonwealth-release/site/build-manifest.json").read_text())
+          assert expected == "https://d3lefts.github.io/commonwealth/", expected
+          assert manifest["site_origin"] == expected, (manifest["site_origin"], expected)
+          html = (pathlib.Path(os.environ["RUNNER_TEMP"]) / "commonwealth-release/site/index.html").read_text()
+          assert 'href="' + expected + '"' in html, "Homepage canonical URL is not the independent origin"
+          print("PASS: renamed dedicated repository and release canonical origin match")
+          PY
       - name: Install independent browser test dependency
         run: npm install --prefix source-research --no-save --no-package-lock playwright-core@1.56.1
       - name: Browser-test mobile and desktop routes
