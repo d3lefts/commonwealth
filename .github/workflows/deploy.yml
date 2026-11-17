@@ -1,0 +1,96 @@
+name: Deploy Commonwealth independently
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: commonwealth-dedicated-pages
+  cancel-in-progress: false
+env:
+  COMMONWEALTH_ORIGIN: "https://d3lefts.github.io/https-d3lefts.github.io-commonwealth-/"
+jobs:
+  snapshot:
+    name: Build, audit and commit standalone static snapshot
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out independent target repository
+        uses: actions/checkout@v4
+        with:
+          path: commonwealth-target
+          persist-credentials: true
+      - name: Check out pinned public Commonwealth source
+        uses: actions/checkout@v4
+        with:
+          repository: d3lefts/d3lefts
+          ref: 240f590a1d44f6a910754ea87c43507eebcb6ae8
+          path: source-research
+          persist-credentials: false
+      - name: Build a canonicalized standalone release
+        shell: bash
+        run: |
+          set -euo pipefail
+          source_ref="$(git -C source-research rev-parse HEAD)"
+          python3 source-research/projects/commonwealth-os/deployment/build_standalone.py \
+            --output "$RUNNER_TEMP/commonwealth-release" \
+            --zip-output "$RUNNER_TEMP/commonwealth-standalone-release.zip" \
+            --base-url "$COMMONWEALTH_ORIGIN" \
+            --source-ref "$source_ref"
+      - name: Validate manifest and site dependency closure
+        run: python3 source-research/projects/commonwealth-os/deployment/test_standalone.py "$RUNNER_TEMP/commonwealth-release"
+      - name: Install independent browser test dependency
+        run: npm install --prefix source-research --no-save --no-package-lock playwright-core@1.56.1
+      - name: Browser-test mobile and desktop routes
+        run: |
+          CHROME_BIN="$(command -v google-chrome)" \
+            node source-research/scripts/test_commonwealth_standalone_browser.mjs "$RUNNER_TEMP/commonwealth-release/site"
+      - name: Commit verified production assets to dedicated repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p commonwealth-target/site
+          rsync -a --delete "$RUNNER_TEMP/commonwealth-release/site/" commonwealth-target/site/
+          git -C commonwealth-target config user.name "github-actions[bot]"
+          git -C commonwealth-target config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C commonwealth-target add site/
+          if ! git -C commonwealth-target diff --cached --quiet; then
+            git -C commonwealth-target commit -m "Publish validated Commonwealth standalone snapshot"
+            git -C commonwealth-target push origin HEAD:main
+          fi
+      - name: Preserve reproducible release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: commonwealth-independent-snapshot
+          path: "${{ runner.temp }}/commonwealth-standalone-release.zip"
+          if-no-files-found: error
+          retention-days: 30
+  deploy:
+    name: Publish standalone site via dedicated GitHub Pages
+    needs: snapshot
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: "${{ steps.deployment.outputs.page_url }}"
+    steps:
+      - name: Check out committed standalone release
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload self-contained static site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4
