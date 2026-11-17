@@ -74,7 +74,7 @@
       "source_sha256": "0ae25a20b94bd1db5148762698c7926c93b035989d4d739ecdb99bb0c56e547b"
     },
     "commonwealth-browser/index.html": {
-      "published_sha256": "2d90b7bcd73c04b1146d40362d1bb10e190b8fb7110846577707cd2087a285e3",
+      "published_sha256": "1a45367ad5827a7fa8e20feaf13800d1efe0983612aaace13c714710c3a19748",
       "source_sha256": "f901dc38a02553145915438092f3e79599ef388ba9603921cc6b856662396baa"
     },
     "commonwealth-browser/participation-core.mjs": {
@@ -138,7 +138,7 @@
       "source_sha256": "b5452c15473542fc9f7f943dbf6d2ba906e48001e6f951f291f3cc5ae107d565"
     },
     "commonwealth-intelligence.html": {
-      "published_sha256": "a40a5c3da039f9a55d69086bae2f4ac569dcb08bf10d6e3c4d7926875b095813",
+      "published_sha256": "f48288f42768897884986c5f8dc4eb8bfb6acc14264a2230ec486ce5c9bf8d97",
       "source_sha256": "85597186f1f5c5f443f453445a94325b64695e8fbb43441808584a0aaea594b3"
     },
     "commonwealth-intelligence.js": {
@@ -154,7 +154,7 @@
       "source_sha256": "7ebaea8cf2e57f9e1c76bed104c2b0c85428e8876303cb7f58d23423038b4386"
     },
     "commonwealth-os.html": {
-      "published_sha256": "98769cc52aabe9c5be54cef428559e78b077e1bee084276443abeb7bd06ce5bb",
+      "published_sha256": "2e432ff76928bb8f46912d79d9784dd0855c8340e5b2753710fe4e8e0e8da766",
       "source_sha256": "36898a7d3153069813243337d6483b7b0b5c99e2f450d6ac8c1728e0be29edcc"
     },
     "commonwealth-os.js": {
@@ -179,25 +179,25 @@
       "source_sha256": "d50a769ae69fab83db927b07779fb38b952d7556760168dba9a8f28ca4257a7f"
     },
     "commonwealth.html": {
-      "published_sha256": "90741334ce89c7bd28d70ce99bb593c3331d91477b31d019aaa02fc0c2276d4f",
+      "published_sha256": "3f82aed9d741db39c36c857aed36192cdf63f99cbd6bf272841da7e437bb007c",
       "source_sha256": "be7cab3eb313c0e1daa6fc356eaaaf940eb61f846c4f56c0f2a642b760c5af82",
       "independent_site_edit": "Guided first-visit experience; original source SHA retained for historical custody."
     },
     "index.html": {
-      "source_sha256": "90741334ce89c7bd28d70ce99bb593c3331d91477b31d019aaa02fc0c2276d4f",
-      "published_sha256": "90741334ce89c7bd28d70ce99bb593c3331d91477b31d019aaa02fc0c2276d4f",
+      "source_sha256": "3f82aed9d741db39c36c857aed36192cdf63f99cbd6bf272841da7e437bb007c",
+      "published_sha256": "3f82aed9d741db39c36c857aed36192cdf63f99cbd6bf272841da7e437bb007c",
       "source_repository": "d3lefts/commonwealth",
       "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
     },
     "journey.html": {
       "source_sha256": "cb1ad3f9ff322f9d6fb35935b408c1259255fd15bbb9f5eab88f98a80566d656",
-      "published_sha256": "cb1ad3f9ff322f9d6fb35935b408c1259255fd15bbb9f5eab88f98a80566d656",
+      "published_sha256": "71bc5a14d4c9c2329570a93b7e8dd5f2e3e989bc0e050a27af3ef23a6a6806d6",
       "source_repository": "d3lefts/commonwealth",
       "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
     },
     "sitemap.xml": {
-      "source_sha256": "792a2ba9d1d1b9c9b1bf60c78b2ca16a491bc428bd1251b00050aecc490f6786",
-      "published_sha256": "792a2ba9d1d1b9c9b1bf60c78b2ca16a491bc428bd1251b00050aecc490f6786",
+      "source_sha256": "81302198be448368011168f49f07f798eacf946cd9c63034f9878e1bb1c79ad1",
+      "published_sha256": "81302198be448368011168f49f07f798eacf946cd9c63034f9878e1bb1c79ad1",
       "source_repository": "d3lefts/commonwealth",
       "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
     },
@@ -221,6 +221,27 @@
       "source_repository": "d3lefts/d3lefts",
       "source_ref": "736a380775650d3efb0ff9b9522d9aad7f72110e",
       "provenance_scope": "Imported fictional experience module, independently released by Commonwealth"
+    },
+    "commonwealth-warrant.html": {
+      "source_sha256": "b3e331a474c6b911a4881472eacc53db1167f1bd9574bd3ee82d00d45384bf75",
+      "published_sha256": "b3e331a474c6b911a4881472eacc53db1167f1bd9574bd3ee82d00d45384bf75",
+      "source_repository": "d3lefts/d3lefts",
+      "source_ref": "1eac242d5b6250b50ee4d0d05e8e38aaadf08ca9",
+      "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth"
+    },
+    "commonwealth-warrant.css": {
+      "source_sha256": "7ef02ca1ba4f87a84fbf9810c04db1993cd4ea0efa28cb83082d2c241fc05205",
+      "published_sha256": "7ef02ca1ba4f87a84fbf9810c04db1993cd4ea0efa28cb83082d2c241fc05205",
+      "source_repository": "d3lefts/d3lefts",
+      "source_ref": "1eac242d5b6250b50ee4d0d05e8e38aaadf08ca9",
+      "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth"
+    },
+    "commonwealth-warrant.mjs": {
+      "source_sha256": "197247b5a51075521719061c8b0b7c19d06bee67b33e1d24b818524e3810b1fe",
+      "published_sha256": "197247b5a51075521719061c8b0b7c19d06bee67b33e1d24b818524e3810b1fe",
+      "source_repository": "d3lefts/d3lefts",
+      "source_ref": "1eac242d5b6250b50ee4d0d05e8e38aaadf08ca9",
+      "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth"
     }
   },
   "format": "commonwealth-static-release/v1",
@@ -231,7 +252,7 @@
   "source_repository": "d3lefts/d3lefts",
   "independent_release": {
     "repository": "d3lefts/commonwealth",
-    "purpose": "Independent synthetic civic onboarding: role-specific explorer, fictional viewpoints, evidence gaps, and optional guided decision tour",
+    "purpose": "Source-scoped civic experience, guided decision tour, and fictional Warrant legal-evidence explorer",
     "original_source_ref_unchanged": true,
     "authority": "synthetic demonstrations only; not legal review or official ballot"
   }

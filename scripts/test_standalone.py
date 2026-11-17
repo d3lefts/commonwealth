@@ -37,6 +37,7 @@ def audit(root: Path):
     assert origin == "https://d3lefts.github.io/commonwealth/", origin
     assert manifest["is_real_election_service"] is False
     required = ["index.html", "commonwealth.html", "commonwealth-os.html",
+                "commonwealth-warrant.html", "commonwealth-warrant.css", "commonwealth-warrant.mjs",
                 "commonwealth-intelligence.html", "commonwealth-browser/index.html",
                 "commonwealth-demos/living-voter.html", "commonwealth-shell.css",
                 "commonwealth-shell.js", "commonwealth-mark.svg",
@@ -68,6 +69,9 @@ def audit(root: Path):
     for dangerous in ("localStorage", "sessionStorage", "sendBeacon", "fetch(", "XMLHttpRequest"):
         assert dangerous not in guided_script, "Guided preferences must be local-only: " + dangerous
     assert "not saved" in (site / "journey.html").read_text().lower()
+    assert "The Warrant" in (site / "commonwealth.html").read_text()
+    assert "not a judicial warrant" in (site / "commonwealth-warrant.html").read_text()
+    assert "commonwealth-warrant.html" in (site / "sitemap.xml").read_text()
     all_links = 0
     for html in site.rglob("*.html"):
         page = html.read_text(encoding="utf-8")
@@ -76,7 +80,7 @@ def audit(root: Path):
         parsed = Links()
         parsed.feed(page)
         if html.relative_to(site).as_posix() in (
-            "index.html", "commonwealth.html", "commonwealth-os.html", "commonwealth-intelligence.html", "journey.html"
+            "index.html", "commonwealth.html", "commonwealth-os.html", "commonwealth-intelligence.html", "journey.html", "commonwealth-warrant.html"
         ):
             assert parsed.canonicals and parsed.canonicals[0].startswith(origin), "Wrong canonical: " + str(html)
         for tag, prop, raw in parsed.local:
