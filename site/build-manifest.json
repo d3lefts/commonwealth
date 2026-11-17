@@ -126,7 +126,7 @@
       "source_sha256": "b5452c15473542fc9f7f943dbf6d2ba906e48001e6f951f291f3cc5ae107d565"
     },
     "commonwealth-intelligence.html": {
-      "published_sha256": "5a76eeb40b697cfd7f998138d562aefc43aa30977f7421b0395624c2b5f816b8",
+      "published_sha256": "a40a5c3da039f9a55d69086bae2f4ac569dcb08bf10d6e3c4d7926875b095813",
       "source_sha256": "85597186f1f5c5f443f453445a94325b64695e8fbb43441808584a0aaea594b3"
     },
     "commonwealth-intelligence.js": {
@@ -142,7 +142,7 @@
       "source_sha256": "7ebaea8cf2e57f9e1c76bed104c2b0c85428e8876303cb7f58d23423038b4386"
     },
     "commonwealth-os.html": {
-      "published_sha256": "24ef20b3f510f796dec05043f8c1e16b958076aefcddebf7e4c8b58b736687ec",
+      "published_sha256": "6ad8ce83eef9f8cb37e059f488397c5f4c4fb3ca270510f172dcdab5febf32b5",
       "source_sha256": "36898a7d3153069813243337d6483b7b0b5c99e2f450d6ac8c1728e0be29edcc"
     },
     "commonwealth-os.js": {
@@ -166,14 +166,14 @@
       "source_sha256": "d50a769ae69fab83db927b07779fb38b952d7556760168dba9a8f28ca4257a7f"
     },
     "commonwealth.html": {
-      "published_sha256": "be332f732733a1fb5a07a960c274855fe32c4afc59fb72ba25d6b9275a876c55",
+      "published_sha256": "e83c9c5b025c24199990676c469f8e755a8c92abb7fdfc73f186f262252e3a79",
       "source_sha256": "be7cab3eb313c0e1daa6fc356eaaaf940eb61f846c4f56c0f2a642b760c5af82"
     }
   },
   "format": "commonwealth-static-release/v1",
   "is_real_election_service": false,
   "research_origin": "https://d3lefts.github.io/d3lefts/",
-  "site_origin": "https://d3lefts.github.io/https-d3lefts.github.io-commonwealth-/",
+  "site_origin": "https://d3lefts.github.io/commonwealth/",
   "source_ref": "240f590a1d44f6a910754ea87c43507eebcb6ae8",
   "source_repository": "d3lefts/d3lefts"
 }
