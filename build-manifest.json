@@ -117,6 +117,18 @@
       "published_sha256": "b2c07439c49ab3c7f0e1971555cd15b3d831375771f7e61fa3247d590f043461",
       "source_sha256": "b2c07439c49ab3c7f0e1971555cd15b3d831375771f7e61fa3247d590f043461"
     },
+    "commonwealth-guided.css": {
+      "source_sha256": "986541917fc7fcb275c0e66fea7c8841aaa8489dd823792ac4cef0609f1087ff",
+      "published_sha256": "986541917fc7fcb275c0e66fea7c8841aaa8489dd823792ac4cef0609f1087ff",
+      "source_repository": "d3lefts/commonwealth",
+      "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
+    },
+    "commonwealth-guided.js": {
+      "source_sha256": "55d6e985b3715471ee41fcf9b2b74d93f5692eb65889db5272d06362af5d8342",
+      "published_sha256": "55d6e985b3715471ee41fcf9b2b74d93f5692eb65889db5272d06362af5d8342",
+      "source_repository": "d3lefts/commonwealth",
+      "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
+    },
     "commonwealth-intelligence-fixtures.js": {
       "published_sha256": "c93a50d03e93f46c84bd5e25da9de12c973c9fdd0c78e29053a90f64b985d4cd",
       "source_sha256": "c93a50d03e93f46c84bd5e25da9de12c973c9fdd0c78e29053a90f64b985d4cd"
@@ -150,8 +162,9 @@
       "source_sha256": "4d7b4149c66bb8653acb3e0ced5816eee2093bf0811dbba428e9f0859edbf281"
     },
     "commonwealth-republic.css": {
-      "published_sha256": "b974938da1a92146cd1f10990e802ff2606ad7f8d4d2afd4f97414a2f224235b",
-      "source_sha256": "b974938da1a92146cd1f10990e802ff2606ad7f8d4d2afd4f97414a2f224235b"
+      "published_sha256": "fe1d3d6d0458813298ff7b5c84f9a891347370e2925d719a9846958e2a9b6a41",
+      "source_sha256": "b974938da1a92146cd1f10990e802ff2606ad7f8d4d2afd4f97414a2f224235b",
+      "independent_site_edit": "Guided first-visit experience; original source SHA retained for historical custody."
     },
     "commonwealth-shell.css": {
       "published_sha256": "5eb76a7d48e49c02cb3bbe913db79ffbb152914ba5567354a0f90aece259cb59",
@@ -166,8 +179,27 @@
       "source_sha256": "d50a769ae69fab83db927b07779fb38b952d7556760168dba9a8f28ca4257a7f"
     },
     "commonwealth.html": {
-      "published_sha256": "e83c9c5b025c24199990676c469f8e755a8c92abb7fdfc73f186f262252e3a79",
-      "source_sha256": "be7cab3eb313c0e1daa6fc356eaaaf940eb61f846c4f56c0f2a642b760c5af82"
+      "published_sha256": "14cf5172b78a70d1aaddbbc2eca8243160924f464fe3dfe56bc08e0544a534fe",
+      "source_sha256": "be7cab3eb313c0e1daa6fc356eaaaf940eb61f846c4f56c0f2a642b760c5af82",
+      "independent_site_edit": "Guided first-visit experience; original source SHA retained for historical custody."
+    },
+    "index.html": {
+      "source_sha256": "14cf5172b78a70d1aaddbbc2eca8243160924f464fe3dfe56bc08e0544a534fe",
+      "published_sha256": "14cf5172b78a70d1aaddbbc2eca8243160924f464fe3dfe56bc08e0544a534fe",
+      "source_repository": "d3lefts/commonwealth",
+      "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
+    },
+    "journey.html": {
+      "source_sha256": "cb1ad3f9ff322f9d6fb35935b408c1259255fd15bbb9f5eab88f98a80566d656",
+      "published_sha256": "cb1ad3f9ff322f9d6fb35935b408c1259255fd15bbb9f5eab88f98a80566d656",
+      "source_repository": "d3lefts/commonwealth",
+      "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
+    },
+    "sitemap.xml": {
+      "source_sha256": "792a2ba9d1d1b9c9b1bf60c78b2ca16a491bc428bd1251b00050aecc490f6786",
+      "published_sha256": "792a2ba9d1d1b9c9b1bf60c78b2ca16a491bc428bd1251b00050aecc490f6786",
+      "source_repository": "d3lefts/commonwealth",
+      "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
     }
   },
   "format": "commonwealth-static-release/v1",
@@ -175,5 +207,11 @@
   "research_origin": "https://d3lefts.github.io/d3lefts/",
   "site_origin": "https://d3lefts.github.io/commonwealth/",
   "source_ref": "240f590a1d44f6a910754ea87c43507eebcb6ae8",
-  "source_repository": "d3lefts/d3lefts"
+  "source_repository": "d3lefts/d3lefts",
+  "independent_release": {
+    "repository": "d3lefts/commonwealth",
+    "purpose": "Privacy-local four-stage civic onboarding, source-matched with independently deployed static files",
+    "original_source_ref_unchanged": true,
+    "authority": "synthetic demonstrations only; not legal review or official ballot"
+  }
 }
