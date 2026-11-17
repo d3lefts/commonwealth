@@ -54,6 +54,28 @@ try{
         route+" overflows "+width+"px screen");
       await page.waitForTimeout(200);
     }
+    // New role-specific first visit, synthetic disagreement and explicit evidence gaps.
+    await page.goto(origin+"commonwealth-browser/index.html",{waitUntil:"load"});
+    assert.equal(await page.locator("#cwexp").isVisible(),true,"Guided civic entrance hidden");
+    await page.locator('[data-cwexp-role="developer"]').click();
+    assert.equal(await page.locator('[data-cwexp-panel="developer"]').isVisible(),true);
+    assert.match(await page.locator('[data-cwexp-panel="developer"]').innerText(),/no live MCP endpoint/i);
+    await page.locator('[data-cwexp-role="representative"]').click();
+    assert.equal(await page.locator('[data-cwexp-panel="representative"]').isVisible(),true);
+    await page.locator('[data-cwexp-role="resident"]').click();
+    await page.locator('[data-cwexp-answer="support"]').click();
+    assert.equal(await page.locator("#cwexp-perspectives").isVisible(),true);
+    assert.equal((await page.locator("#cwexp-viewpoint-total").innerText()).trim(),"24");
+    assert.match(await page.locator("#cwexp-perspectives").innerText(),/not respondents/i);
+    await page.locator('[data-cwexp-step="4"]').click();
+    assert.match(await page.locator("#cwexp-step-evidence").innerText(),/UNKNOWN/i);
+    await page.locator("#cwexp-clear-button").click();
+    assert.equal(await page.locator("#cwexp-perspectives").isVisible(),false);
+    assert.equal(await page.locator('[data-cwexp-answer="support"]').getAttribute("aria-pressed"),"false");
+    await page.locator("#cwexp-reveal-button").click();
+    assert.equal(await page.locator("#cwexp-perspectives").isVisible(),true);
+    assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);
+
     // Four complete civic stages, validation, reset and in-memory-only preference.
     await page.goto(origin+"journey.html",{waitUntil:"load"});
     await page.locator("#cw-next").click();

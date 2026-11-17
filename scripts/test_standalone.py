@@ -41,7 +41,9 @@ def audit(root: Path):
                 "commonwealth-demos/living-voter.html", "commonwealth-shell.css",
                 "commonwealth-shell.js", "commonwealth-mark.svg",
                 "commonwealth-archetypes/balanced-pragmatist.svg",
-                "journey.html", "commonwealth-guided.css", "commonwealth-guided.js"]
+                "journey.html", "commonwealth-guided.css", "commonwealth-guided.js",
+                "commonwealth-browser/experience-core.mjs", "commonwealth-browser/experience.mjs",
+                "commonwealth-browser/experience.css"]
     for name in required:
         assert (site / name).is_file(), "Missing runtime asset: " + name
     for name, meta in manifest["files"].items():
@@ -59,6 +61,8 @@ def audit(root: Path):
     assert (site / "index.html").read_text().count("<h1") == 1
     assert "Research prototypes, not a voting service." in (site / "index.html").read_text()
     assert "SYNTHETIC" in (site / "commonwealth-browser/index.html").read_text()
+    assert '<section id="cwexp"' in (site / "commonwealth-browser/index.html").read_text()
+    assert "commonwealth-browser/index.html#cwexp" in (site / "index.html").read_text()
     assert 'href="journey.html"' in (site / "index.html").read_text()
     guided_script = (site / "commonwealth-guided.js").read_text()
     for dangerous in ("localStorage", "sessionStorage", "sendBeacon", "fetch(", "XMLHttpRequest"):
