@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://d3lefts.github.io/https-d3lefts.github.io-commonwealth-/sitemap.xml
