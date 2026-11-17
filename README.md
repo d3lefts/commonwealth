@@ -1,33 +1,46 @@
-# Commonwealth — Independent Civic Platform
+# Commonwealth — dedicated civic platform
 
-**Repository:** [d3lefts/commonwealth](https://github.com/d3lefts/commonwealth)
+**Independent product repository:** `d3lefts/commonwealth`
 
-**Public site:** https://d3lefts.github.io/commonwealth/
+**Live release target:** https://d3lefts.github.io/commonwealth/
 
-This is the standalone, publicly deployed Commonwealth static product, with its
-own repository, Pages release workflow, and rollback history. It is separate
-from the NIGHTFALL research website.
+This repository contains Commonwealth's standalone public static source and
+all of its release and verification code. No NIGHTFALL checkout, shared
+stylesheet, navigation script, backend, credentials, or runtime fetch is
+required to build, test, deploy, or restore Commonwealth.
 
-## Provenance and deployment
+## Editing and releasing
 
-- Workflow: `.github/workflows/deploy.yml`
-- Pin: `d3lefts/d3lefts` source revision recorded by each release in
-  `site/build-manifest.json`.
-- The workflow builds the allowlisted Commonwealth-only site, validates local
-  links and source/published file SHA-256 checksums, runs Chromium browser tests
-  at mobile and desktop widths, and commits the verified `site/` snapshot.
-- The publication job deploys the snapshot from this repository using GitHub
-  Pages actions. Publication does not require NIGHTFALL's CSS or JavaScript.
+The published source lives in `site/`, containing the civic gateway, workbench,
+Discover, historical browser application, and synthetic Living Voter demo.
+Edit `site/` and stage the same static bytes at the repository root for
+compatibility with either supported GitHub Pages publishing mode. Root and site
+are compared **byte for byte** by the verifier. Both modes use the exact
+`https://d3lefts.github.io/commonwealth/` canonical URL.
 
-The public site is a synthetic research demonstration: no real voter data,
-binding voting, institutional approval, verified legal authority, or production
-backend is implied.
+Changes to site assets or release scripts trigger independent CI:
+- Static dependency closure, provenance SHA-256 and both Pages layouts;
+- Mobile and desktop journey replay using Chromium and locally served assets;
+- GitHub Pages upload and publication from `site/`;
+- External HTTP verification against the exact committed file hashes.
 
-## Recovery
+A failed verifier stops publication. Review and merge changes through this
+repository's pull requests; the CI check runs on pull requests without
+deploying. An authorized person can roll back through this repository's
+commit history and re-run the workflow, without modifying NIGHTFALL.
 
-Use this repository's `main` history and the saved Actions artifact to revert
-or rebuild Commonwealth without altering NIGHTFALL. No release should silently
-advance a formal research certificate or legal authority state.
+## Scientific lineage and limitations
 
-The distinct external NIGHTFALL research origin is
-https://d3lefts.github.io/d3lefts/.
+The original source of this snapshot was commit
+`240f590a1d44f6a910754ea87c43507eebcb6ae8` in
+`d3lefts/d3lefts`; file-level provenance is in
+`site/build-manifest.json`. That research repository is historical
+provenance, **not a current build dependency or controlling authority**.
+
+All data and participants in the demonstration are synthetic or illustrative.
+The project is not an authorized election service, official ballot, live legal
+precedent platform, consented government pilot, or production identity store.
+Nothing in this release certifies actual governmental legitimacy.
+
+For a later custom-domain launch, canonical/sitemap/manifest revisions,
+GitHub Pages settings, TLS and redirects require separately verified approval.
