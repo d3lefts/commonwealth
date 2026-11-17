@@ -1,25 +1,33 @@
-# Commonwealth — independent civic site
+# Commonwealth — Independent Civic Platform
 
-This repository is the separate public deployment for **Commonwealth**, not the NIGHTFALL research site.
+**Repository:** [d3lefts/commonwealth](https://github.com/d3lefts/commonwealth)
 
-**Current repository name:** `https-d3lefts.github.io-commonwealth-` (the name entered when the repository was created). Accordingly, while this name remains, its GitHub Pages project URL is:
+**Public site:** https://d3lefts.github.io/commonwealth/
 
-`https://d3lefts.github.io/https-d3lefts.github.io-commonwealth-/`
+This is the standalone, publicly deployed Commonwealth static product, with its
+own repository, Pages release workflow, and rollback history. It is separate
+from the NIGHTFALL research website.
 
-The shorter intended name is `commonwealth`; repository renaming requires the owner's GitHub Settings → General → Repository name control. **Do not rename without updating the workflow's `COMMONWEALTH_ORIGIN` and rebuilding/republishing the canonical URLs.**
+## Provenance and deployment
 
-## Independent deployment
+- Workflow: `.github/workflows/deploy.yml`
+- Pin: `d3lefts/d3lefts` source revision recorded by each release in
+  `site/build-manifest.json`.
+- The workflow builds the allowlisted Commonwealth-only site, validates local
+  links and source/published file SHA-256 checksums, runs Chromium browser tests
+  at mobile and desktop widths, and commits the verified `site/` snapshot.
+- The publication job deploys the snapshot from this repository using GitHub
+  Pages actions. Publication does not require NIGHTFALL's CSS or JavaScript.
 
-The GitHub Actions workflow `.github/workflows/deploy.yml` builds and verifies a pinned Commonwealth source snapshot from `d3lefts/d3lefts`, copies a vetted static release into this repository's `site/` directory, commits the snapshot, and deploys **only** those files through this repository's own GitHub Pages workflow. After the snapshot is committed, the published site serves no NIGHTFALL CSS, JavaScript, or backend resources.
+The public site is a synthetic research demonstration: no real voter data,
+binding voting, institutional approval, verified legal authority, or production
+backend is implied.
 
-To activate hosting, in this repository's **Settings → Pages**, choose **GitHub Actions** as the build and deployment source. Once enabled, run or rerun **Deploy Commonwealth independently**, then inspect the actual live URL and deep links.
+## Recovery
 
-A Pages deployment report of success and a live browser check are required before NIGHTFALL's existing Commonwealth portal changes to point here. The original NIGHTFALL site remains intact while the new site is unverified.
+Use this repository's `main` history and the saved Actions artifact to revert
+or rebuild Commonwealth without altering NIGHTFALL. No release should silently
+advance a formal research certificate or legal authority state.
 
-All public demonstrations are synthetic and nonbinding. They do not collect real voter data, authorize government actions, implement binding ballots, or establish a production legal-verification service.
-
-## Provenance and rollback
-
-`site/build-manifest.json` records the source commit and SHA-256 of each published file. Each release runs an independent dependency-closure audit and mobile/desktop smoke tests before publication. Rollback by reverting the committed `site/` changes and rerunning this repository's deployment, without touching NIGHTFALL.
-
-The build reads the public upstream source to generate a release. The **deployed snapshot itself** is checked into this repository and is self-contained. The independent site does not require the research site to operate.
+The distinct external NIGHTFALL research origin is
+https://d3lefts.github.io/d3lefts/.
