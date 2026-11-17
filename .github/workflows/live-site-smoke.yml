@@ -1,0 +1,55 @@
+name: Verify public Commonwealth website
+on:
+  push:
+    paths: [".github/workflows/live-site-smoke.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live-site:
+    name: Audit external Pages delivery
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verify public homepage, workspaces, assets and canonical origin
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError, URLError
+          import time
+          from html.parser import HTMLParser
+
+          BASE = "https://d3lefts.github.io/commonwealth/"
+          urls = {
+              "": ("text/html", b"A more informed"),
+              "commonwealth-os.html": ("text/html", b"Commonwealth"),
+              "commonwealth-intelligence.html": ("text/html", b"archetype"),
+              "commonwealth-browser/index.html": ("text/html", b"Commonwealth"),
+              "commonwealth-demos/living-voter.html": ("text/html", b"Living"),
+              "commonwealth-shell.css": ("text/css", b".wrap"),
+              "commonwealth-shell.js": ("javascript", b"nav.classList.toggle"),
+              "commonwealth-mark.svg": ("image/svg+xml", b"<svg"),
+              "build-manifest.json": ("application/json", b'"site_origin"'),
+          }
+          for path, (type_fragment, marker) in urls.items():
+              last_error = None
+              for attempt in range(18):
+                  try:
+                      req = Request(BASE + path, headers={"User-Agent": "CommonwealthIndependentLiveCheck/1.0", "Cache-Control": "no-cache"})
+                      with urlopen(req, timeout=20) as response:
+                          assert response.status == 200, (path, response.status)
+                          assert type_fragment in response.headers.get("Content-Type", ""), (path, response.headers.get("Content-Type"))
+                          data = response.read()
+                          assert marker.lower() in data.lower(), (path, "marker absent")
+                          if path == "":
+                              assert BASE.encode() in data, "Wrong homepage canonical"
+                          print("PASS", path or "/", "bytes", len(data))
+                          break
+                  except (HTTPError, URLError, AssertionError, TimeoutError) as error:
+                      last_error = error
+                      time.sleep(8)
+              else:
+                  raise AssertionError("Public Commonwealth URL failed " + path + ": " + str(last_error))
+          print("PASS independent external HTTP delivery, nine checked site routes/assets")
+          PY
