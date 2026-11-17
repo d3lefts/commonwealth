@@ -40,7 +40,8 @@ def audit(root: Path):
                 "commonwealth-intelligence.html", "commonwealth-browser/index.html",
                 "commonwealth-demos/living-voter.html", "commonwealth-shell.css",
                 "commonwealth-shell.js", "commonwealth-mark.svg",
-                "commonwealth-archetypes/balanced-pragmatist.svg"]
+                "commonwealth-archetypes/balanced-pragmatist.svg",
+                "journey.html", "commonwealth-guided.css", "commonwealth-guided.js"]
     for name in required:
         assert (site / name).is_file(), "Missing runtime asset: " + name
     for name, meta in manifest["files"].items():
@@ -58,6 +59,11 @@ def audit(root: Path):
     assert (site / "index.html").read_text().count("<h1") == 1
     assert "Research prototypes, not a voting service." in (site / "index.html").read_text()
     assert "SYNTHETIC" in (site / "commonwealth-browser/index.html").read_text()
+    assert 'href="journey.html"' in (site / "index.html").read_text()
+    guided_script = (site / "commonwealth-guided.js").read_text()
+    for dangerous in ("localStorage", "sessionStorage", "sendBeacon", "fetch(", "XMLHttpRequest"):
+        assert dangerous not in guided_script, "Guided preferences must be local-only: " + dangerous
+    assert "not saved" in (site / "journey.html").read_text().lower()
     all_links = 0
     for html in site.rglob("*.html"):
         page = html.read_text(encoding="utf-8")
@@ -66,7 +72,7 @@ def audit(root: Path):
         parsed = Links()
         parsed.feed(page)
         if html.relative_to(site).as_posix() in (
-            "index.html", "commonwealth.html", "commonwealth-os.html", "commonwealth-intelligence.html"
+            "index.html", "commonwealth.html", "commonwealth-os.html", "commonwealth-intelligence.html", "journey.html"
         ):
             assert parsed.canonicals and parsed.canonicals[0].startswith(origin), "Wrong canonical: " + str(html)
         for tag, prop, raw in parsed.local:
