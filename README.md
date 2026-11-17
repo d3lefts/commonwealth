@@ -44,3 +44,7 @@ Nothing in this release certifies actual governmental legitimacy.
 
 For a later custom-domain launch, canonical/sitemap/manifest revisions,
 GitHub Pages settings, TLS and redirects require separately verified approval.
+
+## Role-based first-visit experience
+
+The standalone civic site now links to a role-specific, local-only demonstration at `commonwealth-browser/index.html#cwexp`: resident sample preference, invented viewpoint groups, representative accountability path and conceptual read-only developer access. This is independent of the existing `journey.html` four-stage tour. No actual public opinion sample, government authority, operational MCP endpoint or personal preference collection is represented. New experience assets and root/site mirrors are SHA-256 pinned in the independent release manifest; browser CI exercises all roles, preference reset, the evidence gap and both viewport sizes.

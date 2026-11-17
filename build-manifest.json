@@ -74,7 +74,7 @@
       "source_sha256": "0ae25a20b94bd1db5148762698c7926c93b035989d4d739ecdb99bb0c56e547b"
     },
     "commonwealth-browser/index.html": {
-      "published_sha256": "1220071f405d1ff288c37a621a7884db9114bac48be3c4a782e5fac04f4b5b8e",
+      "published_sha256": "2d90b7bcd73c04b1146d40362d1bb10e190b8fb7110846577707cd2087a285e3",
       "source_sha256": "f901dc38a02553145915438092f3e79599ef388ba9603921cc6b856662396baa"
     },
     "commonwealth-browser/participation-core.mjs": {
@@ -154,7 +154,7 @@
       "source_sha256": "7ebaea8cf2e57f9e1c76bed104c2b0c85428e8876303cb7f58d23423038b4386"
     },
     "commonwealth-os.html": {
-      "published_sha256": "6ad8ce83eef9f8cb37e059f488397c5f4c4fb3ca270510f172dcdab5febf32b5",
+      "published_sha256": "98769cc52aabe9c5be54cef428559e78b077e1bee084276443abeb7bd06ce5bb",
       "source_sha256": "36898a7d3153069813243337d6483b7b0b5c99e2f450d6ac8c1728e0be29edcc"
     },
     "commonwealth-os.js": {
@@ -179,13 +179,13 @@
       "source_sha256": "d50a769ae69fab83db927b07779fb38b952d7556760168dba9a8f28ca4257a7f"
     },
     "commonwealth.html": {
-      "published_sha256": "14cf5172b78a70d1aaddbbc2eca8243160924f464fe3dfe56bc08e0544a534fe",
+      "published_sha256": "90741334ce89c7bd28d70ce99bb593c3331d91477b31d019aaa02fc0c2276d4f",
       "source_sha256": "be7cab3eb313c0e1daa6fc356eaaaf940eb61f846c4f56c0f2a642b760c5af82",
       "independent_site_edit": "Guided first-visit experience; original source SHA retained for historical custody."
     },
     "index.html": {
-      "source_sha256": "14cf5172b78a70d1aaddbbc2eca8243160924f464fe3dfe56bc08e0544a534fe",
-      "published_sha256": "14cf5172b78a70d1aaddbbc2eca8243160924f464fe3dfe56bc08e0544a534fe",
+      "source_sha256": "90741334ce89c7bd28d70ce99bb593c3331d91477b31d019aaa02fc0c2276d4f",
+      "published_sha256": "90741334ce89c7bd28d70ce99bb593c3331d91477b31d019aaa02fc0c2276d4f",
       "source_repository": "d3lefts/commonwealth",
       "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
     },
@@ -200,6 +200,27 @@
       "published_sha256": "792a2ba9d1d1b9c9b1bf60c78b2ca16a491bc428bd1251b00050aecc490f6786",
       "source_repository": "d3lefts/commonwealth",
       "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
+    },
+    "commonwealth-browser/experience-core.mjs": {
+      "source_sha256": "b148821a2b65d5012994e291e776c1678728df36c4af43675abc01036452904b",
+      "published_sha256": "b148821a2b65d5012994e291e776c1678728df36c4af43675abc01036452904b",
+      "source_repository": "d3lefts/d3lefts",
+      "source_ref": "736a380775650d3efb0ff9b9522d9aad7f72110e",
+      "provenance_scope": "Imported fictional experience module, independently released by Commonwealth"
+    },
+    "commonwealth-browser/experience.mjs": {
+      "source_sha256": "413deee286ca57dd1dd7518485c4b254fd143d1897eacb47b42567bb781a1be3",
+      "published_sha256": "413deee286ca57dd1dd7518485c4b254fd143d1897eacb47b42567bb781a1be3",
+      "source_repository": "d3lefts/d3lefts",
+      "source_ref": "736a380775650d3efb0ff9b9522d9aad7f72110e",
+      "provenance_scope": "Imported fictional experience module, independently released by Commonwealth"
+    },
+    "commonwealth-browser/experience.css": {
+      "source_sha256": "35ba099c15643f4f451a204de6f8502813f705c3de799b5f37000b941c4e9f17",
+      "published_sha256": "35ba099c15643f4f451a204de6f8502813f705c3de799b5f37000b941c4e9f17",
+      "source_repository": "d3lefts/d3lefts",
+      "source_ref": "736a380775650d3efb0ff9b9522d9aad7f72110e",
+      "provenance_scope": "Imported fictional experience module, independently released by Commonwealth"
     }
   },
   "format": "commonwealth-static-release/v1",
@@ -210,7 +231,7 @@
   "source_repository": "d3lefts/d3lefts",
   "independent_release": {
     "repository": "d3lefts/commonwealth",
-    "purpose": "Privacy-local four-stage civic onboarding, source-matched with independently deployed static files",
+    "purpose": "Independent synthetic civic onboarding: role-specific explorer, fictional viewpoints, evidence gaps, and optional guided decision tour",
     "original_source_ref_unchanged": true,
     "authority": "synthetic demonstrations only; not legal review or official ballot"
   }
