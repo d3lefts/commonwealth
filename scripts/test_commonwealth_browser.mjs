@@ -42,7 +42,8 @@ try{
       ["commonwealth-os.html","Commonwealth"],
       ["commonwealth-intelligence.html","Commonwealth"],
       ["commonwealth-browser/index.html","Commonwealth"],
-      ["commonwealth-demos/living-voter.html","Living Voter"]
+      ["commonwealth-demos/living-voter.html","Living Voter"],
+      ["journey.html","Commonwealth"]
     ];
     for(const [route,title] of journeys){
       const response=await page.goto(origin+route,{waitUntil:"load",timeout:30000});
@@ -53,6 +54,26 @@ try{
         route+" overflows "+width+"px screen");
       await page.waitForTimeout(200);
     }
+    // Four complete civic stages, validation, reset and in-memory-only preference.
+    await page.goto(origin+"journey.html",{waitUntil:"load"});
+    await page.locator("#cw-next").click();
+    assert.equal(await page.locator("#cw-error").isVisible(),true,"No-choice validation missing");
+    await page.locator('input[name="cw-stance"][value="oppose"]').check();
+    await page.locator("#cw-next").click();
+    assert.equal(await page.locator("#cw-compare-heading").isVisible(),true,"Comparison stage not rendered");
+    assert.match(await page.locator("#cw-comparison").innerText(),/differs from your selected preference/i);
+    await page.locator("#cw-next").click();
+    assert.equal(await page.locator("#cw-evidence-heading").isVisible(),true,"Evidence stage not rendered");
+    assert.match(await page.locator(".cw-guided-passport").innerText(),/Not assessed/);
+    await page.locator("#cw-next").click();
+    assert.equal(await page.locator("#cw-outcome-heading").isVisible(),true,"Response stage not rendered");
+    assert.equal(await page.locator("#cw-outcome-preference").innerText(),"Oppose");
+    assert.equal(await page.locator("#cw-progress").getAttribute("value"),"4");
+    assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0,"No preference may be persisted");
+    await page.locator("#cw-next").click();
+    assert.equal(await page.locator("#cw-step-heading").isVisible(),true,"Reset must return to step one");
+    assert.equal(await page.locator('input[name="cw-stance"]:checked').count(),0,"Reset must discard choice");
+    await page.screenshot({path:"browser-artifacts/commonwealth-journey-"+width+".png",fullPage:false});
     await page.goto(origin,{waitUntil:"load"});
     assert.equal(await page.locator('link[href="site.css"],script[src="site.js"]').count(),0,
       "No NIGHTFALL runtime should be loaded");

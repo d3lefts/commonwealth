@@ -15,7 +15,8 @@ base = manifest["site_origin"]
 assert base == "https://d3lefts.github.io/commonwealth/"
 paths = ["", "commonwealth.html", "commonwealth-os.html",
          "commonwealth-intelligence.html", "commonwealth-browser/index.html",
-         "commonwealth-demos/living-voter.html", "commonwealth-shell.css",
+         "commonwealth-demos/living-voter.html", "journey.html", "commonwealth-guided.css",
+         "commonwealth-guided.js", "commonwealth-shell.css",
          "commonwealth-shell.js", "commonwealth-mark.svg", "build-manifest.json"]
 for path in paths:
     local = SITE / (path or "index.html")
@@ -46,4 +47,4 @@ for path in paths:
                 time.sleep(6)
     else:
         raise AssertionError("PUBLIC WEB DELIVERY FAILED " + (path or "/") + ": " + last)
-print("PASS ten exact-byte external Pages routes and assets", flush=True)
+print("PASS all listed exact-byte external Pages routes and assets", flush=True)
