@@ -1,0 +1,179 @@
+{
+  "assurance": "Synthetic and nonbinding; no production authority or authenticity certificate.",
+  "files": {
+    "commonwealth-archetypes.js": {
+      "published_sha256": "c894e7b3afe90600dea2ed4cdc379001e20e3561bf11db95fa71d4c0374247e9",
+      "source_sha256": "c894e7b3afe90600dea2ed4cdc379001e20e3561bf11db95fa71d4c0374247e9"
+    },
+    "commonwealth-archetypes/balanced-pragmatist.svg": {
+      "published_sha256": "5cfd857e37e850c0d4cdf156f452b3631b6329184fa4c80acca380846890de37",
+      "source_sha256": "5cfd857e37e850c0d4cdf156f452b3631b6329184fa4c80acca380846890de37"
+    },
+    "commonwealth-archetypes/care-advocate.svg": {
+      "published_sha256": "132ba72c0946681dd1bbcf9b173e1664933cf9b907689ce2b02764b94fabb54b",
+      "source_sha256": "132ba72c0946681dd1bbcf9b173e1664933cf9b907689ce2b02764b94fabb54b"
+    },
+    "commonwealth-archetypes/civic-creator.svg": {
+      "published_sha256": "f55996ae20729bf133884c5790dcf53b678cb2cf268a37bd36aaf9e6ac99f4e5",
+      "source_sha256": "f55996ae20729bf133884c5790dcf53b678cb2cf268a37bd36aaf9e6ac99f4e5"
+    },
+    "commonwealth-archetypes/climate-guardian.svg": {
+      "published_sha256": "837cfb229878125fbc31ac4ebe834c909b6159bbf1e75ad481d396d07a26fbd7",
+      "source_sha256": "837cfb229878125fbc31ac4ebe834c909b6159bbf1e75ad481d396d07a26fbd7"
+    },
+    "commonwealth-archetypes/community-builder.svg": {
+      "published_sha256": "80dfea7ea4a491c77688cc87b5f25541165382154767265fd75b2d6271c22279",
+      "source_sha256": "80dfea7ea4a491c77688cc87b5f25541165382154767265fd75b2d6271c22279"
+    },
+    "commonwealth-archetypes/equality-champion.svg": {
+      "published_sha256": "d54ced9ae230ae243dd2aa4834c813e188a9dedb9f31b7a8add3d5bbabc40d50",
+      "source_sha256": "d54ced9ae230ae243dd2aa4834c813e188a9dedb9f31b7a8add3d5bbabc40d50"
+    },
+    "commonwealth-archetypes/global-minded.svg": {
+      "published_sha256": "b8f6af11b4a21ce86750d5a94cca3c31157a15ef8cf99fce663d50812e81b863",
+      "source_sha256": "b8f6af11b4a21ce86750d5a94cca3c31157a15ef8cf99fce663d50812e81b863"
+    },
+    "commonwealth-archetypes/liberty-defender.svg": {
+      "published_sha256": "b8f44278749ea6a438ea99fdb59716baff232c90fc52bd5f3b9e7b118a01b271",
+      "source_sha256": "b8f44278749ea6a438ea99fdb59716baff232c90fc52bd5f3b9e7b118a01b271"
+    },
+    "commonwealth-archetypes/opportunity-builder.svg": {
+      "published_sha256": "89ab48c3e5becf9b2767b5e368c4ffa312c20cf60e093d3abb2f72da96db1c0b",
+      "source_sha256": "89ab48c3e5becf9b2767b5e368c4ffa312c20cf60e093d3abb2f72da96db1c0b"
+    },
+    "commonwealth-archetypes/security-sentinel.svg": {
+      "published_sha256": "796e0c36615d9df3fd672604f34ccda8d30afc5815c7b430582db8c25140aebc",
+      "source_sha256": "796e0c36615d9df3fd672604f34ccda8d30afc5815c7b430582db8c25140aebc"
+    },
+    "commonwealth-archetypes/tech-reformist.svg": {
+      "published_sha256": "65f93afbf6a80253020346b481799bdd050d9688f989aaed38f8df2fa9f3f1e5",
+      "source_sha256": "65f93afbf6a80253020346b481799bdd050d9688f989aaed38f8df2fa9f3f1e5"
+    },
+    "commonwealth-archetypes/working-american.svg": {
+      "published_sha256": "c7c3bb33e3eaf18a9b5bc2cc947c4ad4de5d5d2629ceb5c30ac39e69faab5209",
+      "source_sha256": "c7c3bb33e3eaf18a9b5bc2cc947c4ad4de5d5d2629ceb5c30ac39e69faab5209"
+    },
+    "commonwealth-browser/app.mjs": {
+      "published_sha256": "bd7aa24df595d677d0080122205cdd6b46683af99b61607f39fedb85f2f6b049",
+      "source_sha256": "bd7aa24df595d677d0080122205cdd6b46683af99b61607f39fedb85f2f6b049"
+    },
+    "commonwealth-browser/core.mjs": {
+      "published_sha256": "417f40b6607c1f7ea84861e8103a1d9d98a5d64d011d2964a54500d1e892423a",
+      "source_sha256": "417f40b6607c1f7ea84861e8103a1d9d98a5d64d011d2964a54500d1e892423a"
+    },
+    "commonwealth-browser/fixtures.mjs": {
+      "published_sha256": "5124370a015580f7b642d94428f949f99556c3404293e0c7c79cfa0daf751f47",
+      "source_sha256": "5124370a015580f7b642d94428f949f99556c3404293e0c7c79cfa0daf751f47"
+    },
+    "commonwealth-browser/historical-fixtures.js": {
+      "published_sha256": "c93a50d03e93f46c84bd5e25da9de12c973c9fdd0c78e29053a90f64b985d4cd",
+      "source_sha256": "c93a50d03e93f46c84bd5e25da9de12c973c9fdd0c78e29053a90f64b985d4cd"
+    },
+    "commonwealth-browser/history-core.mjs": {
+      "published_sha256": "0ae25a20b94bd1db5148762698c7926c93b035989d4d739ecdb99bb0c56e547b",
+      "source_sha256": "0ae25a20b94bd1db5148762698c7926c93b035989d4d739ecdb99bb0c56e547b"
+    },
+    "commonwealth-browser/index.html": {
+      "published_sha256": "1220071f405d1ff288c37a621a7884db9114bac48be3c4a782e5fac04f4b5b8e",
+      "source_sha256": "f901dc38a02553145915438092f3e79599ef388ba9603921cc6b856662396baa"
+    },
+    "commonwealth-browser/participation-core.mjs": {
+      "published_sha256": "2d32f8bfa745601886805aa42cff6ce91c0d9b522acf11942fd224444c4dfc45",
+      "source_sha256": "2d32f8bfa745601886805aa42cff6ce91c0d9b522acf11942fd224444c4dfc45"
+    },
+    "commonwealth-browser/participation-section.html": {
+      "published_sha256": "58198f480620ba22793992e60effebfef5d692917bd3cb7327593488ca76cbd4",
+      "source_sha256": "58198f480620ba22793992e60effebfef5d692917bd3cb7327593488ca76cbd4"
+    },
+    "commonwealth-browser/participation-ui.mjs": {
+      "published_sha256": "302908b45772043a394357af9a345ed1eba5ef29867e9d0a963090a389aeb66b",
+      "source_sha256": "302908b45772043a394357af9a345ed1eba5ef29867e9d0a963090a389aeb66b"
+    },
+    "commonwealth-browser/participation.css": {
+      "published_sha256": "f02693f21694683ff89048a5bc49e8ff7090108da7f9088b80770c6a7f793215",
+      "source_sha256": "f02693f21694683ff89048a5bc49e8ff7090108da7f9088b80770c6a7f793215"
+    },
+    "commonwealth-browser/question-data.mjs": {
+      "published_sha256": "7a6e3badda478d1f55e81a4c773ba2b3b9b24905656277537640913c39e80dc1",
+      "source_sha256": "7a6e3badda478d1f55e81a4c773ba2b3b9b24905656277537640913c39e80dc1"
+    },
+    "commonwealth-browser/styles.css": {
+      "published_sha256": "3061d306cbdbca5c4108a91bf6d65ad9f83b34313643b7562ae7c5615f32e90d",
+      "source_sha256": "3061d306cbdbca5c4108a91bf6d65ad9f83b34313643b7562ae7c5615f32e90d"
+    },
+    "commonwealth-browser/workspace.css": {
+      "published_sha256": "6b8795583bbe6d528b1377fc16b7b0fc3b9dfdc9c0034ef85c482f84bf5d74c5",
+      "source_sha256": "6b8795583bbe6d528b1377fc16b7b0fc3b9dfdc9c0034ef85c482f84bf5d74c5"
+    },
+    "commonwealth-browser/workspace.mjs": {
+      "published_sha256": "41102d12d40b1b137f8b8a792d1650696a3d6c1f7a4bb093048ded7f892212ed",
+      "source_sha256": "41102d12d40b1b137f8b8a792d1650696a3d6c1f7a4bb093048ded7f892212ed"
+    },
+    "commonwealth-demos/living-voter.html": {
+      "published_sha256": "abc31211c36b1b6ea117b9904a954fd6c9b73cec9df745547cc6cf66620f9d1d",
+      "source_sha256": "abc31211c36b1b6ea117b9904a954fd6c9b73cec9df745547cc6cf66620f9d1d"
+    },
+    "commonwealth-family.css": {
+      "published_sha256": "b2c07439c49ab3c7f0e1971555cd15b3d831375771f7e61fa3247d590f043461",
+      "source_sha256": "b2c07439c49ab3c7f0e1971555cd15b3d831375771f7e61fa3247d590f043461"
+    },
+    "commonwealth-intelligence-fixtures.js": {
+      "published_sha256": "c93a50d03e93f46c84bd5e25da9de12c973c9fdd0c78e29053a90f64b985d4cd",
+      "source_sha256": "c93a50d03e93f46c84bd5e25da9de12c973c9fdd0c78e29053a90f64b985d4cd"
+    },
+    "commonwealth-intelligence.css": {
+      "published_sha256": "b5452c15473542fc9f7f943dbf6d2ba906e48001e6f951f291f3cc5ae107d565",
+      "source_sha256": "b5452c15473542fc9f7f943dbf6d2ba906e48001e6f951f291f3cc5ae107d565"
+    },
+    "commonwealth-intelligence.html": {
+      "published_sha256": "a40a5c3da039f9a55d69086bae2f4ac569dcb08bf10d6e3c4d7926875b095813",
+      "source_sha256": "85597186f1f5c5f443f453445a94325b64695e8fbb43441808584a0aaea594b3"
+    },
+    "commonwealth-intelligence.js": {
+      "published_sha256": "af244d50dcdd9d30fee4edc9a1c7ed41675f11d462def1407bc4d343197abdf1",
+      "source_sha256": "af244d50dcdd9d30fee4edc9a1c7ed41675f11d462def1407bc4d343197abdf1"
+    },
+    "commonwealth-mark.svg": {
+      "published_sha256": "51e95f2786ec90fb96ab296a86136ecd6ed1f3432f149c947740c88881b68233",
+      "source_sha256": "51e95f2786ec90fb96ab296a86136ecd6ed1f3432f149c947740c88881b68233"
+    },
+    "commonwealth-os.css": {
+      "published_sha256": "7ebaea8cf2e57f9e1c76bed104c2b0c85428e8876303cb7f58d23423038b4386",
+      "source_sha256": "7ebaea8cf2e57f9e1c76bed104c2b0c85428e8876303cb7f58d23423038b4386"
+    },
+    "commonwealth-os.html": {
+      "published_sha256": "6ad8ce83eef9f8cb37e059f488397c5f4c4fb3ca270510f172dcdab5febf32b5",
+      "source_sha256": "36898a7d3153069813243337d6483b7b0b5c99e2f450d6ac8c1728e0be29edcc"
+    },
+    "commonwealth-os.js": {
+      "published_sha256": "4d7b4149c66bb8653acb3e0ced5816eee2093bf0811dbba428e9f0859edbf281",
+      "source_sha256": "4d7b4149c66bb8653acb3e0ced5816eee2093bf0811dbba428e9f0859edbf281"
+    },
+    "commonwealth-republic.css": {
+      "published_sha256": "b974938da1a92146cd1f10990e802ff2606ad7f8d4d2afd4f97414a2f224235b",
+      "source_sha256": "b974938da1a92146cd1f10990e802ff2606ad7f8d4d2afd4f97414a2f224235b"
+    },
+    "commonwealth-shell.css": {
+      "published_sha256": "5eb76a7d48e49c02cb3bbe913db79ffbb152914ba5567354a0f90aece259cb59",
+      "source_sha256": "5eb76a7d48e49c02cb3bbe913db79ffbb152914ba5567354a0f90aece259cb59"
+    },
+    "commonwealth-shell.js": {
+      "published_sha256": "9139bed4036503b14a977f30e177ffa16bcdcf0d6e261ff23b498cf473ca30ec",
+      "source_sha256": "9139bed4036503b14a977f30e177ffa16bcdcf0d6e261ff23b498cf473ca30ec"
+    },
+    "commonwealth.css": {
+      "published_sha256": "d50a769ae69fab83db927b07779fb38b952d7556760168dba9a8f28ca4257a7f",
+      "source_sha256": "d50a769ae69fab83db927b07779fb38b952d7556760168dba9a8f28ca4257a7f"
+    },
+    "commonwealth.html": {
+      "published_sha256": "e83c9c5b025c24199990676c469f8e755a8c92abb7fdfc73f186f262252e3a79",
+      "source_sha256": "be7cab3eb313c0e1daa6fc356eaaaf940eb61f846c4f56c0f2a642b760c5af82"
+    }
+  },
+  "format": "commonwealth-static-release/v1",
+  "is_real_election_service": false,
+  "research_origin": "https://d3lefts.github.io/d3lefts/",
+  "site_origin": "https://d3lefts.github.io/commonwealth/",
+  "source_ref": "240f590a1d44f6a910754ea87c43507eebcb6ae8",
+  "source_repository": "d3lefts/d3lefts"
+}
