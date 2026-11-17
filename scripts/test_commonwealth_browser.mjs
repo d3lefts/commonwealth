@@ -43,7 +43,8 @@ try{
       ["commonwealth-intelligence.html","Commonwealth"],
       ["commonwealth-browser/index.html","Commonwealth"],
       ["commonwealth-demos/living-voter.html","Living Voter"],
-      ["journey.html","Commonwealth"]
+      ["journey.html","Commonwealth"],
+      ["commonwealth-warrant.html","The Warrant"]
     ];
     for(const [route,title] of journeys){
       const response=await page.goto(origin+route,{waitUntil:"load",timeout:30000});
@@ -74,6 +75,20 @@ try{
     assert.equal(await page.locator('[data-cwexp-answer="support"]').getAttribute("aria-pressed"),"false");
     await page.locator("#cwexp-reveal-button").click();
     assert.equal(await page.locator("#cwexp-perspectives").isVisible(),true);
+    assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);
+
+    // Public Warrant never promotes fictional evidence into legal authorization.
+    await page.goto(origin+"commonwealth-warrant.html",{waitUntil:"load"});
+    assert.equal(await page.locator("#warrant-case-status").innerText(),"ILLUSTRATIVE");
+    await page.locator('[data-warrant-layer="evidence"]').click();
+    assert.equal(await page.locator('[data-warrant-panel="evidence"]').isVisible(),true);
+    assert.match(await page.locator('[data-warrant-panel="evidence"]').innerText(),/SYNTHETIC_UNVERIFIED/);
+    await page.locator('[data-warrant-layer="assurance"]').click();
+    assert.equal(await page.locator('[data-warrant-panel="assurance"]').isVisible(),true);
+    await page.locator("#warrant-change-source").click();
+    assert.equal(await page.locator("#warrant-recheck-state").innerText(),"RECHECK_REQUIRED");
+    await page.locator("#warrant-change-source").click();
+    assert.match(await page.locator("#warrant-recheck-state").innerText(),/illustrative only/i);
     assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);
 
     // Four complete civic stages, validation, reset and in-memory-only preference.
