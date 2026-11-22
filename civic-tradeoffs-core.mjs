@@ -75,7 +75,7 @@ export function decisionWarrant(plan, stance="not-stated") {
       authenticated:false,scenario:p.scenario,sourceVersion:MODEL.version},
     authority:{status:"NOT_ESTABLISHED",jurisdiction:"Fictional Harborview",officialDecision:false},
     evidence:{status:"SYNTHETIC_UNVERIFIED",costBasis:"Fixed annual demonstration amounts; not a fiscal forecast",
-      optionImpacts:chosen.map(o=>({id:o.id,kind:o.group,amount:o.amount,qualitativeImpact:o.detail}))},
+      optionImpacts:chosen.map(o=>({id:o.id,name:o.name,kind:o.group,amount:o.amount,qualitativeImpact:o.detail}))},
     cost:{status:"REPLAYABLE_MODEL_ARITHMETIC",services:MODEL.annualServices,
       funding:MODEL.scenarios[p.scenario].funding,gap:p.target,
       reductions:p.cuts,revenue:p.revenue,covered:p.covered,remaining:p.remaining,
