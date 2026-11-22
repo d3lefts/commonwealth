@@ -179,13 +179,13 @@
       "source_sha256": "d50a769ae69fab83db927b07779fb38b952d7556760168dba9a8f28ca4257a7f"
     },
     "commonwealth.html": {
-      "published_sha256": "3f82aed9d741db39c36c857aed36192cdf63f99cbd6bf272841da7e437bb007c",
+      "published_sha256": "5acb3fdf39076b76626e31975fbbb32bddf78c5e8acd83d7d5230a0a46dc6dac",
       "source_sha256": "be7cab3eb313c0e1daa6fc356eaaaf940eb61f846c4f56c0f2a642b760c5af82",
-      "independent_site_edit": "Guided first-visit experience; original source SHA retained for historical custody."
+      "independent_site_edit": "Retains historical source digest; independent site added the guided journey and fictional civic trade-off exercise."
     },
     "index.html": {
-      "source_sha256": "3f82aed9d741db39c36c857aed36192cdf63f99cbd6bf272841da7e437bb007c",
-      "published_sha256": "3f82aed9d741db39c36c857aed36192cdf63f99cbd6bf272841da7e437bb007c",
+      "source_sha256": "5acb3fdf39076b76626e31975fbbb32bddf78c5e8acd83d7d5230a0a46dc6dac",
+      "published_sha256": "5acb3fdf39076b76626e31975fbbb32bddf78c5e8acd83d7d5230a0a46dc6dac",
       "source_repository": "d3lefts/commonwealth",
       "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
     },
@@ -196,8 +196,8 @@
       "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
     },
     "sitemap.xml": {
-      "source_sha256": "81302198be448368011168f49f07f798eacf946cd9c63034f9878e1bb1c79ad1",
-      "published_sha256": "81302198be448368011168f49f07f798eacf946cd9c63034f9878e1bb1c79ad1",
+      "source_sha256": "7bcf7b31331f3bd7d9879a40958b9d6cc7f102b8f2edac5cef9c90d5b7c83c66",
+      "published_sha256": "7bcf7b31331f3bd7d9879a40958b9d6cc7f102b8f2edac5cef9c90d5b7c83c66",
       "source_repository": "d3lefts/commonwealth",
       "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
     },
@@ -242,6 +242,30 @@
       "source_repository": "d3lefts/d3lefts",
       "source_ref": "1eac242d5b6250b50ee4d0d05e8e38aaadf08ca9",
       "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth"
+    },
+    "civic-tradeoffs.html": {
+      "published_sha256": "2edacdc4174c4b7cbd559dac22124857758e0ab1e614b33ba4b07ecbeff73fd9",
+      "source_sha256": "2edacdc4174c4b7cbd559dac22124857758e0ab1e614b33ba4b07ecbeff73fd9",
+      "source_repository": "d3lefts/commonwealth",
+      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media."
+    },
+    "civic-tradeoffs.css": {
+      "published_sha256": "1c20c83dfb3e92be5ab7cbf6d1b1cf99f1bf60c56901dffa227bbc6f1ac72a5b",
+      "source_sha256": "1c20c83dfb3e92be5ab7cbf6d1b1cf99f1bf60c56901dffa227bbc6f1ac72a5b",
+      "source_repository": "d3lefts/commonwealth",
+      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media."
+    },
+    "civic-tradeoffs.mjs": {
+      "published_sha256": "2a744d00670f9d971420b1e4c2975dad11a8fbfd20c33563e7b3126f1dfe8202",
+      "source_sha256": "2a744d00670f9d971420b1e4c2975dad11a8fbfd20c33563e7b3126f1dfe8202",
+      "source_repository": "d3lefts/commonwealth",
+      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media."
+    },
+    "civic-tradeoffs-core.mjs": {
+      "published_sha256": "9940d1a01151c7818e61a786ac5b16b75b9799743bedcd22d6de965e7b525a82",
+      "source_sha256": "9940d1a01151c7818e61a786ac5b16b75b9799743bedcd22d6de965e7b525a82",
+      "source_repository": "d3lefts/commonwealth",
+      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media."
     }
   },
   "format": "commonwealth-static-release/v1",
@@ -252,7 +276,7 @@
   "source_repository": "d3lefts/d3lefts",
   "independent_release": {
     "repository": "d3lefts/commonwealth",
-    "purpose": "Source-scoped civic experience, guided decision tour, and fictional Warrant legal-evidence explorer",
+    "purpose": "Source-scoped civic experience, guided decision tour, and fictional Warrant legal-evidence explorer; original fictional Civic Trade-off Lab",
     "original_source_ref_unchanged": true,
     "authority": "synthetic demonstrations only; not legal review or official ballot"
   }
