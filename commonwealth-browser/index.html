@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111827">
-  <meta name="description" content="Commonwealth OS: synthetic proposals, deliberation, amendments, budgets, accountable outcomes, 72 draft pilot questions, historical roll calls, source evidence and Proof Passports. No real ballots or records.">
+  <meta name="description" content="Commonwealth OS: synthetic proposals, deliberation, amendments, budgets, accountable outcomes, 72 draft pilot questions, historical roll calls, source evidence and scoped Warrants. No real ballots or records.">
   <title>Commonwealth OS | Comprehensive Synthetic Civic Workspace</title>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./workspace.css">
@@ -130,15 +130,15 @@
     <nav class="cwui-nav" aria-label="Commonwealth workspace navigation">
   <a href="#cwui-chamber">Chamber</a><a href="#cwpart-app">Participation</a><a href="#cwui-issues">Issue questions</a>
   <a href="#cwui-representation">Representation</a><a href="#cwui-public">Public records</a>
-  <a href="#cwui-steward">Steward</a><a href="#cwui-assurance">Technical Proof Passport</a>
+  <a href="#cwui-steward">Steward</a><a href="#cwui-assurance">Technical-check Warrant</a>
 </nav>
 <div class="cwui-ribbon"><strong>COMMONWEALTH OS / SYNTHETIC RESEARCH PREVIEW</strong><span>No actual government data, identity, political profile storage or official votes. All sample names, sources and districts are invented.</span></div>
 <section id="cwui-chamber" aria-labelledby="pilot-heading" class="panel"><h2 id="pilot-heading">Choose a governance profile</h2><div id="pilot-tabs" class="tabs" role="group" aria-label="Synthetic pilot environments"></div><h3 id="pilot-name"></h3><p id="pilot-description"></p><dl class="details"><div><dt>Authority basis</dt><dd id="authority"></dd></div><div><dt>Decision scope</dt><dd id="scope"></dd></div><div><dt>Rule revision</dt><dd id="rule-revision"></dd></div><div><dt>Quorum</dt><dd id="quorum"></dd></div><div><dt>Yes/no threshold</dt><dd id="threshold"></dd></div></dl></section>
     <div class="columns">
       <section class="panel" aria-labelledby="motion-heading"><p class="eyebrow">Legislative work item</p><h2 id="motion-heading"></h2><p id="motion-summary"></p><div class="trace"><div>01 Draft</div><div>02 Amend</div><div>03 Lock revision</div><div>04 Close demo ballot</div><div>05 Verify</div></div><label for="scenario">Adversarial evidence case</label><select id="scenario"></select><button id="run" type="button">Run procedural checker</button><p class="small">The checker is deterministic, local, and reads only synthetic fixtures. Browser controls cannot authorize an official action.</p></section>
-      <section id="cwui-assurance" class="panel" aria-labelledby="result-heading"><p class="eyebrow">Technical Proof Passport / procedural checks</p><h2 id="result-heading">Evidence evaluation</h2><p id="result" class="result" aria-live="polite"></p><div id="tally" class="tally"></div><ol id="checks" class="checks"></ol><button id="download" type="button" class="secondary">Export evidence JSON + SHA-256 payload digest</button>
+      <section id="cwui-assurance" class="panel" aria-labelledby="result-heading"><p class="eyebrow">Technical-check Warrant / procedural checks</p><h2 id="result-heading">Evidence evaluation</h2><p id="result" class="result" aria-live="polite"></p><div id="tally" class="tally"></div><ol id="checks" class="checks"></ol><button id="download" type="button" class="secondary">Export evidence JSON + SHA-256 payload digest</button>
       <div class="verify-panel"><label for="verify-input">Check a previously exported evidence file</label><input type="file" id="verify-input" accept=".json,application/json"><button type="button" id="verify" class="secondary">Verify local payload digest</button><p id="verify-result" role="status" aria-live="polite">Select your exported JSON to check its payload digest. The file stays on this device.</p></div>
-      <p class="small">The <a href="../commonwealth-warrant.html">Commonwealth Warrant</a> is the separate public legal-evidence concept (Authority / Evidence / Assurance). This technical procedural check is not that legal assessment.</p><p class="small">SHA-256 covers the UTF-8 bytes of JSON.stringify(payload, null, 2), NOT the whole downloaded envelope. A matching checksum is not a signature, proof of origin, official legal conclusion, or independent election certification. A separate Node verifier is linked in the project source.</p></section>
+      <p class="small">The <a href="../commonwealth-warrant.html">Commonwealth Warrant</a> is the separate public legal-evidence concept (Authority / Evidence / Assurance). This technical-check Warrant tests a different fixed fictional case; it does not assess the current participatory budget or authorize an action.</p><p class="small">SHA-256 covers the UTF-8 bytes of JSON.stringify(payload, null, 2), NOT the whole downloaded envelope. A matching checksum is not a signature, proof of origin, official legal conclusion, or independent election certification. A separate Node verifier is linked in the project source.</p></section>
     </div>
 <section id="cwpart-app" class="cwpart-section" aria-labelledby="cwpart-title">
   <div class="cwpart-heading">
@@ -175,7 +175,7 @@
   </div>
   <div class="cwpart-lower">
     <section id="cwpart-budget" class="cwpart-card" aria-labelledby="cwpart-budget-title">
-      <p class="eyebrow">PARTICIPATORY BUDGETING / NONBINDING</p><h3 id="cwpart-budget-title">Make the trade-offs visible.</h3>
+      <p class="eyebrow">PARTICIPATORY BUDGETING / NONBINDING</p><h3 id="cwpart-budget-title">Make the trade-offs visible.</h3><p class="small">For a separate full cost-and-evidence journey with an optional Living Voter stance and live illustrative Warrant, <a href="../civic-tradeoffs.html#builder">open the Civic Trade-off Lab ↗</a>. The two synthetic models do not share data or user choices.</p>
       <p>Choose a portfolio of fictional projects under a fixed demonstration ceiling. No actual funding or budget vote occurs.</p>
       <div id="cwpart-budget-projects" class="cwpart-project-list"></div><strong id="cwpart-budget-total"></strong><p id="cwpart-budget-result" role="status" aria-live="polite"></p><small id="cwpart-budget-caveat"></small>
       <button type="button" class="cwpart-btn cwpart-btn-quiet" id="cwpart-budget-clear">Clear budget slate</button>
@@ -190,7 +190,7 @@
     <div class="cwpart-heading"><div><p class="eyebrow">PUBLIC ACCOUNTABILITY / NO SILENT DISAPPEARING PROPOSALS</p><h3 id="cwpart-accountability-title">What did the institution say, and what happened next?</h3><p>Every fictional item retains its reasoned response or an explicit pending state, plus any declared implementation milestones and correction requests.</p></div><span class="cwpart-badge">NO REAL GOVERNMENT ENDORSEMENT</span></div>
     <div id="cwpart-accountability-list" class="cwpart-accountability-grid"></div>
   </section>
-  <p class="cwpart-boundary">Commonwealth differentiator: exact historical member roll calls and provision-specific policy comparisons are available in <a href="#cwui-representation">Representation</a>; source gaps and original record identifiers appear in <a href="#cwui-public">Public Evidence</a>; the separate <a href="#cwui-assurance">Proof Passport</a> evaluates a fixed fictional governance scenario. This new participation area does not falsely attest those independent checks as applied to its locally editable proposals.</p>
+  <p class="cwpart-boundary">Commonwealth differentiator: exact historical member roll calls and provision-specific policy comparisons are available in <a href="#cwui-representation">Representation</a>; source gaps and original record identifiers appear in <a href="#cwui-public">Public Evidence</a>; the separate <a href="#cwui-assurance">technical-check Warrant</a> evaluates a fixed fictional governance scenario. This new participation area does not falsely attest those independent checks as applied to its locally editable proposals.</p>
 </section>
 
 <section id="cwui-issues" class="cwui-section" aria-labelledby="cwui-issues-title">

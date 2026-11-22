@@ -59,8 +59,41 @@ export function evaluatePlan({scenario="baseline",selected=[],levy=0}={}) {
   };
 }
 
-export function receipt(plan) {
+/** Decision Warrant: scope-limited snapshot, never an authorization. */
+export const WARRANT_ID = "CW-W-HARBORVIEW-001";
+export const STANCES = Object.freeze(["support","oppose","unsure","no-preference","not-stated"]);
+export function decisionWarrant(plan, stance="not-stated") {
+  if (!STANCES.includes(stance)) throw new RangeError("Invalid hypothetical stance");
   const p=evaluatePlan(plan);
+  const chosen=MODEL.options.filter(option=>p.selected.includes(option.id));
+  return {
+    schema:"commonwealth-illustrative-warrant/v1",
+    id:WARRANT_ID,
+    class:"ILLUSTRATIVE_ONLY",
+    model:MODEL.version,
+    source:{id:"CW-SYN-HARBORVIEW-BUDGET-01",kind:"AUTHORED_SYNTHETIC_FIXTURE",
+      authenticated:false,scenario:p.scenario,sourceVersion:MODEL.version},
+    authority:{status:"NOT_ESTABLISHED",jurisdiction:"Fictional Harborview",officialDecision:false},
+    evidence:{status:"SYNTHETIC_UNVERIFIED",costBasis:"Fixed annual demonstration amounts; not a fiscal forecast",
+      optionImpacts:chosen.map(o=>({id:o.id,name:o.name,kind:o.group,amount:o.amount,qualitativeImpact:o.detail}))},
+    cost:{status:"REPLAYABLE_MODEL_ARITHMETIC",services:MODEL.annualServices,
+      funding:MODEL.scenarios[p.scenario].funding,gap:p.target,
+      reductions:p.cuts,revenue:p.revenue,covered:p.covered,remaining:p.remaining,
+      surplus:p.surplus,targetMet:p.targetMet},
+    impacts:{status:"NOT_ASSESSED",equity:"UNKNOWN",legalFeasibility:"UNKNOWN",
+      revenueRealization:"UNKNOWN",timing:"UNKNOWN",unmodeledEffects:"UNKNOWN"},
+    livingVoter:{status:stance==="not-stated"?"NOT_STATED":"VOLUNTARY_HYPOTHETICAL",
+      stance,notBallot:true,storedOrSubmitted:false},
+    representation:{status:"NO_COMPARABLE_RECORDED_VOTE",fictionalMembersOnly:true},
+    assurance:{status:"ARITHMETIC_REPLAY_SCOPE_ONLY",legalReview:"NOT_PERFORMED",
+      fundingForecast:"NOT_VALIDATED",independentFiscalAudit:"NOT_PERFORMED"},
+    limitation:"No real jurisdiction, vote, fiscal forecast, legal approval, personal profile sync or official Warrant issuance."
+  };
+}
+
+export function receipt(plan, stance="not-stated") {
+  const p=evaluatePlan(plan);
+  const warrant=decisionWarrant(plan,stance);
   const lines=[
     "COMMONWEALTH / FICTIONAL CIVIC TRADE-OFF EXERCISE",
     "No government submission or public opinion measurement",
@@ -80,13 +113,17 @@ export function receipt(plan) {
   lines.push("Cuts: "+money(p.cuts)+"; Revenue: "+money(p.revenue));
   lines.push("Gap closed: "+money(p.covered)+"; Remaining: "+money(p.remaining)+"; Surplus: "+money(p.surplus));
   lines.push("Target met: "+(p.targetMet?"YES":"NO"));
+  lines.push("THE WARRANT: "+warrant.id+" · "+warrant.class);
+  lines.push("Authority: "+warrant.authority.status+"; Evidence: "+warrant.evidence.status+"; Arithmetic: "+warrant.cost.status);
+  lines.push("Living Voter stance: "+stance+" (hypothetical, not a ballot; no representative record)");
   lines.push("Assumptions: fixed annual amounts; no behavioral, equity, tax incidence, legal or second-order effects modeled.");
   lines.push("Local-only scenario; neither official figures nor advocacy.");
   return lines.join("\n");
 }
 
-export function exportedPlan(plan) {
+export function exportedPlan(plan, stance="not-stated") {
   const p=evaluatePlan(plan);
+  const warrant=decisionWarrant(plan,stance);
   return JSON.stringify({
     schema:"commonwealth-fictional-plan/v1",
     model:MODEL.version,
@@ -94,6 +131,7 @@ export function exportedPlan(plan) {
     scenario:p.scenario,
     selected:p.selected,
     levy:p.levy,
-    calculation:{target:p.target,cuts:p.cuts,revenue:p.revenue,covered:p.covered,remaining:p.remaining,surplus:p.surplus,targetMet:p.targetMet}
+    calculation:{target:p.target,cuts:p.cuts,revenue:p.revenue,covered:p.covered,remaining:p.remaining,surplus:p.surplus,targetMet:p.targetMet},
+    warrant
   }, null, 2)+"\n";
 }

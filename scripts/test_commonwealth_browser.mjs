@@ -87,20 +87,45 @@ try{
     await page.locator("#levy-input").evaluate(el=>{el.value="100000";el.dispatchEvent(new Event("input",{bubbles:true}));});
     assert.equal(await page.locator("#covered-total").innerText(),"$910,000");
     assert.equal(await page.locator("#remaining-total").innerText(),"$1,490,000");
+    assert.equal(await page.locator("#warrant-covered").innerText(),"$910,000 addressed");
+    assert.equal(await page.locator("#warrant-gap").innerText(),"$2,400,000 target");
+    assert.match(await page.locator("#warrant-impacts").innerText(),/parks maintenance/i);
+    assert.match(await page.locator("#warrant-impacts").innerText(),/parking permit/i);
+    assert.match(await page.locator(".lab-warrant-grid").innerText(),/NOT ESTABLISHED/);
+    assert.match(await page.locator(".lab-warrant-grid").innerText(),/NOT ASSESSED/);
+    await page.locator('input[name="lab-stance"][value="support"]').check();
+    assert.equal(await page.locator("#warrant-stance").innerText(),"Support this package");
+    assert.match(await page.locator("#lab-stance-status").innerText(),/private hypothetical/i);
+
     await page.locator('input[name="scenario"][value="stress"]').check();
     assert.equal(await page.locator("#gap-target").innerText(),"$3,200,000");
     assert.equal(await page.locator("#remaining-total").innerText(),"$2,290,000");
+    assert.equal(await page.locator("#warrant-stance").innerText(),"Not stated",
+      "Editing the budget must invalidate a stale personal stance");
+    assert.equal(await page.locator('input[name="lab-stance"]:checked').count(),0);
+    await page.locator('input[name="lab-stance"][value="unsure"]').check();
+    assert.equal(await page.locator("#warrant-stance").innerText(),"Need more evidence");
+
     assert.match(await page.locator("#receipt-choices").innerText(),/parking permit/i);
     await page.locator("#reset-plan").click();
     assert.equal(await page.locator("#covered-total").innerText(),"$0");
     assert.equal(await page.locator("[data-budget-option]:checked").count(),0);
     assert.equal(await page.locator("#levy-input").inputValue(),"0");
+    assert.equal(await page.locator("#warrant-stance").innerText(),"Not stated");
+    assert.equal(await page.locator('input[name="lab-stance"]:checked').count(),0);
+    assert.equal(await page.locator("#warrant-covered").innerText(),"$0 addressed");
+    assert.equal(await page.locator('a[href="commonwealth-warrant.html#budget-warrant"]').count(),1);
+    assert.equal(await page.locator('a[href="commonwealth-demos/living-voter.html#preview-top"]').count(),1);
+
     assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0,
       "Trade-off lab must not persist preferences");
 
     // Public Warrant never promotes fictional evidence into legal authorization.
     await page.goto(origin+"commonwealth-warrant.html",{waitUntil:"load"});
     assert.equal(await page.locator("#warrant-case-status").innerText(),"ILLUSTRATIVE");
+    assert.equal(await page.locator("#budget-warrant").isVisible(),true);
+    assert.equal(await page.locator('#budget-warrant a[href="civic-tradeoffs.html#builder"]').count(),1);
+
     await page.locator('[data-warrant-layer="evidence"]').click();
     assert.equal(await page.locator('[data-warrant-panel="evidence"]').isVisible(),true);
     assert.match(await page.locator('[data-warrant-panel="evidence"]').innerText(),/SYNTHETIC_UNVERIFIED/);

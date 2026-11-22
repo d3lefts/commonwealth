@@ -69,6 +69,23 @@ def audit(root: Path):
     assert 'href="journey.html"' in (site / "index.html").read_text()
     assert 'href="civic-tradeoffs.html"' in (site / "index.html").read_text()
     assert "civic-tradeoffs.html" in (site / "sitemap.xml").read_text()
+    civic = (site / "civic-tradeoffs.html").read_text()
+    for token in ('id="living-voter-decision"', 'id="plan-warrant"',
+                  'id="warrant-impacts"', 'name="lab-stance"'):
+        assert token in civic, "Missing integrated decision step: " + token
+    warrant = (site / "commonwealth-warrant.html").read_text()
+    assert 'id="budget-warrant"' in warrant
+    assert 'href="civic-tradeoffs.html#builder"' in warrant
+    voter = (site / "commonwealth-demos/living-voter.html").read_text()
+    assert 'href="../civic-tradeoffs.html#builder"' in voter
+    # User-facing terminology: historic JS identifiers/anchors may remain for compatibility,
+    # but the published narrative must call the artifacts Warrants, never Proof Passports.
+    legacy = re.compile(r'(?i)\b(?:technical\s+)?proof\s+passports?\b|'
+                        r'\bdemocratic\s+assurance\s+passports?\b|\bevidence\s+passport\b')
+    for public in list(site.rglob("*.html")) + list(site.rglob("*.mjs")):
+        assert not legacy.search(public.read_text(encoding="utf-8")), (
+            "Legacy public terminology: " + str(public.relative_to(site)))
+
     assert "No government submission" in (site / "civic-tradeoffs-core.mjs").read_text()
     guided_script = (site / "commonwealth-guided.js").read_text()
     for dangerous in ("localStorage", "sessionStorage", "sendBeacon", "fetch(", "XMLHttpRequest"):
