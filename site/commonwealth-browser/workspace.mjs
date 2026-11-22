@@ -113,7 +113,7 @@ function renderSteward(){
   ['OFF','Identity service','No actual accounts, DOB collection, eligibility or address lookups'],
   ['OFF','AI with write authority','No model may cast, certify, publish or transact'],
   ['DEMO','Constituent answers','Voluntary transient browser-state research responses'],
-  ['DEMO','Proof Passport','Procedural fixture checks without authenticated custody']
+  ['DEMO','Technical-check Warrant','Procedural fixture checks without authenticated custody']
  ]){const row=make('div','cwui-gate');add(row,make('span','cwui-status',status),make('strong','',title),make('small','',detail));box.append(row);}
 }
 function wire(){
