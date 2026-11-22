@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#142b49">
+<meta name="description" content="Explore fictional civic budget trade-offs with transparent calculations, a live funding-gap meter, and a private downloadable scenario receipt. Commonwealth research demo; no official decisions.">
+<meta property="og:title" content="Civic Trade-off Lab | Commonwealth">
+<meta property="og:description" content="Understand the constraints, choose trade-offs, inspect assumptions. A fictional, nonbinding civic budget experience.">
+<meta property="og:url" content="https://d3lefts.github.io/commonwealth/civic-tradeoffs.html">
+<link rel="canonical" href="https://d3lefts.github.io/commonwealth/civic-tradeoffs.html">
+<link rel="icon" href="commonwealth-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="civic-tradeoffs.css">
+<script type="module" src="civic-tradeoffs.mjs"></script>
+<title>Civic Trade-off Lab | Commonwealth</title>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the exercise</a>
+<div class="flag-line" aria-hidden="true"></div>
+<header class="lab-header">
+  <div class="lab-wrap lab-header-inner">
+    <a class="lab-brand" href="./" aria-label="Commonwealth home"><span class="lab-mark" aria-hidden="true">✦</span><span>COMMONWEALTH<small>A MORE INFORMED REPUBLIC</small></span></a>
+    <nav aria-label="Page navigation"><a href="#context">Understand</a><a href="#builder">Build</a><a href="#review">Review</a><a class="lab-back" href="./">Home ↗</a></nav>
+  </div>
+</header>
+<main id="main">
+  <section class="lab-hero" aria-labelledby="lab-title">
+    <div class="lab-wrap lab-hero-grid">
+      <div>
+        <p class="eyebrow">COMMONWEALTH / CIVIC TRADE-OFF LAB · EXPERIMENT 01</p>
+        <h1 id="lab-title">A public budget.<br><em>Your perspective.</em></h1>
+        <p class="lab-lede">Real civic choices involve both benefits and costs. Explore a fictional community's budget, try alternative priorities, and inspect exactly how each choice changes the arithmetic.</p>
+        <div class="lab-hero-actions"><a class="lab-button lab-primary" href="#builder">Build a scenario <span aria-hidden="true">↓</span></a><a class="lab-button lab-secondary" href="#assumptions">Read the assumptions <span aria-hidden="true">↗</span></a></div>
+        <p class="lab-boundary"><strong>Fictional and nonbinding.</strong> Harborview is invented. Every dollar is a deliberately constructed teaching value, not a government estimate, tax proposal, prediction, election, survey or recommendation. No responses are transmitted or stored.</p>
+      </div>
+      <aside class="hero-ledger" aria-label="Exercise overview">
+        <div class="hero-ledger-top"><span>THE HARBORVIEW EXERCISE</span><span>MODEL / 01</span></div>
+        <div class="hero-ledger-number">$2.4<span>M</span></div>
+        <p>Illustrative annual funding gap to close in the baseline scenario</p>
+        <div class="hero-ledger-row"><span>Services</span><strong>$12.4M</strong></div>
+        <div class="hero-ledger-row"><span>Funding</span><strong>$10.0M</strong></div>
+        <div class="hero-ledger-row"><span>Unfunded</span><strong>$2.4M</strong></div>
+        <div class="hero-ledger-foot">FIGURES ARE SYNTHETIC / NOT A MUNICIPAL BUDGET</div>
+      </aside>
+    </div>
+  </section>
+  <nav class="lab-stages" aria-label="Exercise steps"><div class="lab-wrap"><a href="#context"><span>01</span> Understand the constraint</a><a href="#builder"><span>02</span> Make trade-offs</a><a href="#review"><span>03</span> Inspect your plan</a></div></nav>
+  <section class="lab-context lab-wrap" id="context" aria-labelledby="context-heading">
+    <div class="lab-section-heading"><p class="eyebrow">01 / UNDERSTAND</p><h2 id="context-heading">The numbers are the beginning. <em>Not the decision.</em></h2><p>We begin with an invented annual service budget and two clearly defined funding scenarios. The arithmetic is exact; the human consequences are qualitative prompts for deliberation, not measured forecasts.</p></div>
+    <div class="lab-explainer-grid">
+      <article class="lab-explainer"><span>01 / FUNDING</span><strong>$10.0M</strong><h3>Baseline revenue</h3><p>A fixed illustrative amount available to support the community's annual services.</p></article>
+      <article class="lab-explainer"><span>02 / SERVICES</span><strong>$12.4M</strong><h3>Illustrative costs</h3><p>The baseline operating plan would need more than the available funding.</p></article>
+      <article class="lab-explainer"><span>03 / CHOICE</span><strong>$2.4M</strong><h3>The gap to close</h3><p>Reduce some costs, consider new revenue, or combine the two. Every option has a trade-off.</p></article>
+    </div>
+    <p class="lab-context-note">This exercise is about reasoning under constraints, not optimizing a city. It omits many real-world obligations, distributional effects, feasibility limits and uncertain outcomes.</p>
+  </section>
+  <section class="lab-builder-section" id="builder" aria-labelledby="builder-heading">
+    <div class="lab-wrap">
+      <div class="lab-section-heading"><p class="eyebrow">02 / BUILD</p><h2 id="builder-heading">What would <em>you</em> prioritize?</h2><p>Choose simulated service reductions and revenue options. The funding meter updates immediately. You can test a harder scenario without losing your selections.</p></div>
+      <div class="lab-builder-layout">
+        <div class="lab-controls">
+          <fieldset class="lab-scenario">
+            <legend>Choose the constraint</legend>
+            <div class="lab-scenario-options"><label><input type="radio" name="scenario" value="baseline" checked><span><strong>Baseline</strong><small>$2.4M gap</small></span></label><label><input type="radio" name="scenario" value="stress"><span><strong>Funding stress</strong><small>$3.2M gap</small></span></label></div>
+            <p>Stress test: funding falls from $10.0M to $9.2M, with service costs held at $12.4M. This is an invented sensitivity test, not a forecast.</p>
+          </fieldset>
+          <div class="lab-group-head"><span>01 / SERVICE REDUCTIONS</span><h3>What could be reduced?</h3><p>Select any option to include its full illustrative annual cost reduction. These are teaching scenarios, not recommended cuts.</p></div>
+          <div id="cut-options" class="lab-option-list"><p>Enable JavaScript to interact with the scenario.</p></div>
+          <div class="lab-group-head lab-group-head-revenue"><span>02 / REVENUE OPTIONS</span><h3>What could bring in funding?</h3><p>Every option represents a simulated annual revenue amount. Changes could shift costs to residents, businesses or visitors.</p></div>
+          <div id="revenue-options" class="lab-option-list"></div>
+          <div class="lab-levy">
+            <div class="lab-levy-heading"><div><strong>Additional general revenue</strong><small>A hypothetical lever, not a household tax calculator</small></div><output id="levy-output" for="levy-input">$0</output></div>
+            <label for="levy-input">Additional annual revenue in $100,000 steps</label>
+            <input id="levy-input" type="range" min="0" max="1500000" step="100000" value="0">
+            <div class="lab-range-labels"><span>$0</span><span>$1.5M</span></div>
+            <p>The exercise assumes each increment adds exactly $100,000, without modeling its source or who pays. It is not a proposed rate or a household-cost estimate.</p>
+          </div>
+        </div>
+        <aside class="lab-tally" aria-labelledby="tally-heading">
+          <div class="lab-tally-top"><span>YOUR LIVE SCENARIO</span><span id="scenario-name">BASELINE</span></div>
+          <h3 id="tally-heading">Funding gap</h3>
+          <strong id="gap-target" class="lab-target">$2,400,000</strong>
+          <div class="lab-meter-head"><span id="gap-status" role="status" aria-live="polite">No options selected</span><strong id="gap-percent">0%</strong></div>
+          <progress id="gap-progress" max="100" value="0" aria-label="Percentage of funding target addressed">0%</progress>
+          <div class="lab-tally-rows"><div><span>Service reductions</span><strong id="cut-total">$0</strong></div><div><span>Additional revenue</span><strong id="revenue-total">$0</strong></div><div><span>Total gap addressed</span><strong id="covered-total">$0</strong></div><div class="lab-tally-remaining"><span id="balance-label">Still to address</span><strong id="remaining-total">$2,400,000</strong></div></div>
+          <p class="lab-tally-foot">No data is sent, saved in browser storage, or submitted to any government. Your choices exist only while this page is open.</p>
+          <a href="#review" class="lab-button lab-primary lab-tally-action">Inspect the full plan <span aria-hidden="true">↓</span></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <section class="lab-review lab-wrap" id="review" aria-labelledby="review-heading">
+    <div class="lab-section-heading"><p class="eyebrow">03 / REVIEW</p><h2 id="review-heading">Inspect the <em>consequences.</em></h2><p>A balanced total does not mean an equitable or workable policy. Review each choice, the people who could experience its effects, and the evidence this simple model cannot supply.</p></div>
+    <div class="lab-review-grid">
+      <div class="lab-receipt"><div class="lab-receipt-header"><span>SCENARIO RECEIPT</span><strong id="receipt-status">Gap not yet closed</strong></div><div id="receipt-choices" class="lab-choices"><p>No choices selected yet.</p></div><dl class="lab-summary"><div><dt>Target</dt><dd id="receipt-target">$2,400,000</dd></div><div><dt>Addressed</dt><dd id="receipt-addressed">$0</dd></div><div><dt>Remaining / surplus</dt><dd id="receipt-balance">$2,400,000 remaining</dd></div></dl></div>
+      <div class="lab-reflection"><span class="lab-mini-label">BEFORE ANY REAL DECISION</span><h3>What this model cannot tell you</h3><ul><li>Whether a service reduction is lawful, feasible or safe.</li><li>Who bears the costs and who receives the benefits.</li><li>Whether modeled revenue would actually be collected.</li><li>What happens in later years or under economic changes.</li><li>Whether residents or their representatives support a choice.</li></ul><a href="commonwealth-warrant.html">Explore Commonwealth's evidence Warrant ↗</a></div>
+    </div>
+    <div class="lab-share"><div><h3>Keep a private, inspectable record.</h3><p>Copy a plain-language summary or download a machine-readable JSON receipt. Both are created on your device only; neither counts as a submitted budget.</p><p id="action-message" class="lab-action-message" role="status" aria-live="polite"></p><textarea id="copy-fallback" hidden readonly aria-label="Copyable scenario summary"></textarea></div><div class="lab-share-actions"><button id="copy-plan" type="button" class="lab-button lab-primary">Copy summary</button><button id="download-plan" type="button" class="lab-button lab-secondary">Download JSON receipt</button><button id="reset-plan" type="button" class="lab-button lab-link">Reset all choices</button></div></div>
+  </section>
+  <section class="lab-assumptions" id="assumptions" aria-labelledby="assumptions-heading"><div class="lab-wrap">
+    <div class="lab-section-heading"><p class="eyebrow">METHODOLOGY / SCOPE</p><h2 id="assumptions-heading">Show the workings.</h2><p>Every number should travel with a plain-language explanation of what it represents and what it leaves out.</p></div>
+    <div class="lab-qa"><details open><summary>What exactly is calculated?</summary><p>Each selected cost reduction and revenue option is counted once. The optional general-revenue lever adds an integer amount in $100,000 increments. Covered gap = selected cost reductions + selected revenue options + general-revenue lever. Remaining = max(0, scenario gap - covered); surplus = max(0, covered - scenario gap). All calculations use exact integer dollars.</p></details>
+    <details><summary>Where do the figures come from?</summary><p>They were authored as a synthetic educational fixture for Commonwealth, not extracted from DeLand, an actual city budget, fiscal projections, voter preferences, or property records. The baseline starts with $12.4M in service costs and $10.0M in funding. The stress case holds services fixed and reduces funding by $800,000.</p></details>
+    <details><summary>Is a balanced plan automatically a good policy?</summary><p>No. A numerical match is only one constraint. Real governments must evaluate statutory duties, equity, eligibility, staffing, timing, unintended consequences, alternatives, source quality, public consultation and representative authority. Commonwealth's Warrant treats evidence and legal authority as separate questions.</p></details>
+    <details><summary>Are my choices collected or made public?</summary><p>No. The page makes no preference API requests, uses no local or session storage, and does not send your selections to the Commonwealth project or a government office. Copy and download actions run only after you press the relevant button. Do not mistake a downloaded receipt for an official submission.</p></details></div>
+    <p class="lab-credit">Interaction research reference: <a href="https://amendment-3.delandfl.gov/" rel="noopener noreferrer">City of DeLand's Amendment 3 public budget explainer ↗</a>. Commonwealth reimplements general interaction patterns with original code, independent fictional data and its own visual identity. The reference site's official information and municipal images are not incorporated.</p>
+  </div></section>
+</main>
+<footer class="lab-footer"><div class="lab-wrap"><span>COMMONWEALTH · A MORE INFORMED REPUBLIC</span><span>FICTIONAL EXERCISE · NO PUBLIC INPUT COLLECTED</span><a href="./">Back to Commonwealth ↗</a></div></footer>
+</body>
+</html>

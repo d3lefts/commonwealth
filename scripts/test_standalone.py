@@ -43,6 +43,8 @@ def audit(root: Path):
                 "commonwealth-shell.js", "commonwealth-mark.svg",
                 "commonwealth-archetypes/balanced-pragmatist.svg",
                 "journey.html", "commonwealth-guided.css", "commonwealth-guided.js",
+                "civic-tradeoffs.html", "civic-tradeoffs.css", "civic-tradeoffs.mjs",
+                "civic-tradeoffs-core.mjs",
                 "commonwealth-browser/experience-core.mjs", "commonwealth-browser/experience.mjs",
                 "commonwealth-browser/experience.css"]
     for name in required:
@@ -65,6 +67,9 @@ def audit(root: Path):
     assert '<section id="cwexp"' in (site / "commonwealth-browser/index.html").read_text()
     assert "commonwealth-browser/index.html#cwexp" in (site / "index.html").read_text()
     assert 'href="journey.html"' in (site / "index.html").read_text()
+    assert 'href="civic-tradeoffs.html"' in (site / "index.html").read_text()
+    assert "civic-tradeoffs.html" in (site / "sitemap.xml").read_text()
+    assert "No government submission" in (site / "civic-tradeoffs-core.mjs").read_text()
     guided_script = (site / "commonwealth-guided.js").read_text()
     for dangerous in ("localStorage", "sessionStorage", "sendBeacon", "fetch(", "XMLHttpRequest"):
         assert dangerous not in guided_script, "Guided preferences must be local-only: " + dangerous

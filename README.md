@@ -48,3 +48,13 @@ GitHub Pages settings, TLS and redirects require separately verified approval.
 ## Role-based first-visit experience
 
 The standalone civic site now links to a role-specific, local-only demonstration at `commonwealth-browser/index.html#cwexp`: resident sample preference, invented viewpoint groups, representative accountability path and conceptual read-only developer access. This is independent of the existing `journey.html` four-stage tour. No actual public opinion sample, government authority, operational MCP endpoint or personal preference collection is represented. New experience assets and root/site mirrors are SHA-256 pinned in the independent release manifest; browser CI exercises all roles, preference reset, the evidence gap and both viewport sizes.
+
+## Civic Trade-off Lab (fictional, local-only)
+
+Open [the Civic Trade-off Lab](https://d3lefts.github.io/commonwealth/civic-tradeoffs.html) from the Commonwealth homepage. The original implementation borrows *interaction concepts* from the City of DeLand's [Amendment 3 civic budget explainer](https://amendment-3.delandfl.gov/): a guided explanation, live funding-gap progress, budget levers, visible assumptions, and a shareable summary. No DeLand copy, municipal datasets, imagery, proprietary source code, or visual brand assets are reused.
+
+The Harborview budget is an **invented educational fixture**. Two scenarios ($2.4M and $3.2M gaps), nine illustrative choices, and a stepped general-revenue lever use exact integer-dollar arithmetic in `civic-tradeoffs-core.mjs`. `civic-tradeoffs.mjs` draws the interactive UI with no network calls, persistence, official submissions or voter survey capture. Copy and JSON download require explicit clicks; the receipt preserves model version, assumptions, and selections without claiming legal or fiscal certification. The evidence vocabulary links back to The Warrant.
+
+Audit a full Cartesian product of the two gap scenarios, all 512 choice subsets, and all 16 lever steps (16,384 cases) with `node scripts/test_civic_tradeoffs.mjs`. CI also executes the page at 390px and 1280px, checking live recomputation, stress scenario, reset, overflow, and absence of preference storage. All published assets are mirrored under `site/` and the root, and pinned in `site/build-manifest.json`.
+
+**Promotion boundary:** A passed arithmetic/browser check certifies only the deterministic fictional exercise, not its viability as public policy. Any real-jurisdiction data integration, fiscal model, feedback submission or sharing of sensitive political preferences requires a separately reviewed source/consent/authority design.
