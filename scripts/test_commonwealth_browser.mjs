@@ -84,7 +84,7 @@ try{
     assert.equal(await page.locator("#covered-total").innerText(),"$0");
     await page.locator('[data-budget-option="parks"]').check();
     await page.locator('[data-budget-option="parking"]').check();
-    await page.locator("#levy-input").fill("100000");
+    await page.locator("#levy-input").evaluate(el=>{el.value="100000";el.dispatchEvent(new Event("input",{bubbles:true}));});
     assert.equal(await page.locator("#covered-total").innerText(),"$910,000");
     assert.equal(await page.locator("#remaining-total").innerText(),"$1,490,000");
     await page.locator('input[name="scenario"][value="stress"]').check();
