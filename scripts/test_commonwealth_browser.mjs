@@ -44,6 +44,7 @@ try{
       ["commonwealth-browser/index.html","Commonwealth"],
       ["commonwealth-demos/living-voter.html","Living Voter"],
       ["journey.html","Commonwealth"],
+      ["civic-tradeoffs.html","Commonwealth"],
       ["commonwealth-warrant.html","The Warrant"]
     ];
     for(const [route,title] of journeys){
@@ -76,6 +77,26 @@ try{
     await page.locator("#cwexp-reveal-button").click();
     assert.equal(await page.locator("#cwexp-perspectives").isVisible(),true);
     assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);
+
+    // Synthetic local-only budget: scenario, choices, stress case, exact totals, reset.
+    await page.goto(origin+"civic-tradeoffs.html",{waitUntil:"load"});
+    assert.equal(await page.locator("#gap-target").innerText(),"$2,400,000");
+    assert.equal(await page.locator("#covered-total").innerText(),"$0");
+    await page.locator('[data-budget-option="parks"]').check();
+    await page.locator('[data-budget-option="parking"]').check();
+    await page.locator("#levy-input").fill("100000");
+    assert.equal(await page.locator("#covered-total").innerText(),"$910,000");
+    assert.equal(await page.locator("#remaining-total").innerText(),"$1,490,000");
+    await page.locator('input[name="scenario"][value="stress"]').check();
+    assert.equal(await page.locator("#gap-target").innerText(),"$3,200,000");
+    assert.equal(await page.locator("#remaining-total").innerText(),"$2,290,000");
+    assert.match(await page.locator("#receipt-choices").innerText(),/parking permit/i);
+    await page.locator("#reset-plan").click();
+    assert.equal(await page.locator("#covered-total").innerText(),"$0");
+    assert.equal(await page.locator("[data-budget-option]:checked").count(),0);
+    assert.equal(await page.locator("#levy-input").inputValue(),"0");
+    assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0,
+      "Trade-off lab must not persist preferences");
 
     // Public Warrant never promotes fictional evidence into legal authorization.
     await page.goto(origin+"commonwealth-warrant.html",{waitUntil:"load"});
