@@ -42,6 +42,7 @@ for(const [name,s] of Object.entries(MODEL.scenarios)){
       assert.equal(w.cost.gap,w.cost.services-w.cost.funding);
       assert.equal(w.evidence.optionImpacts.length,selected.length);
       assert.deepEqual(w.evidence.optionImpacts.map(o=>o.id),p.selected);
+      assert.deepEqual(w.evidence.optionImpacts.map(o=>o.name),p.selected.map(id=>opts.find(o=>o.id===id).name));
       assert.equal(w.authority.status,"NOT_ESTABLISHED");
       assert.equal(w.evidence.status,"SYNTHETIC_UNVERIFIED");
       assert.equal(w.impacts.legalFeasibility,"UNKNOWN");
