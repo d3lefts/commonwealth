@@ -20,7 +20,7 @@
 <header class="lab-header">
   <div class="lab-wrap lab-header-inner">
     <a class="lab-brand" href="./" aria-label="Commonwealth home"><span class="lab-mark" aria-hidden="true">✦</span><span>COMMONWEALTH<small>A MORE INFORMED REPUBLIC</small></span></a>
-    <nav aria-label="Page navigation"><a href="#context">Understand</a><a href="#builder">Build</a><a href="#review">Review</a><a class="lab-back" href="./">Home ↗</a></nav>
+    <nav aria-label="Page navigation"><a href="#context">Understand</a><a href="#builder">Build</a><a href="#review">Review</a><a href="#living-voter-decision">Living Voter</a><a href="#plan-warrant">The Warrant</a><a class="lab-back" href="./">Home ↗</a></nav>
   </div>
 </header>
 <main id="main">
@@ -44,7 +44,7 @@
       </aside>
     </div>
   </section>
-  <nav class="lab-stages" aria-label="Exercise steps"><div class="lab-wrap"><a href="#context"><span>01</span> Understand the constraint</a><a href="#builder"><span>02</span> Make trade-offs</a><a href="#review"><span>03</span> Inspect your plan</a></div></nav>
+  <nav class="lab-stages" aria-label="Exercise steps"><div class="lab-wrap"><a href="#context"><span>01</span> Understand the constraint</a><a href="#builder"><span>02</span> Make trade-offs</a><a href="#review"><span>03</span> Inspect costs</a><a href="#living-voter-decision"><span>04</span> State a view</a><a href="#plan-warrant"><span>05</span> The Warrant</a></div></nav>
   <section class="lab-context lab-wrap" id="context" aria-labelledby="context-heading">
     <div class="lab-section-heading"><p class="eyebrow">01 / UNDERSTAND</p><h2 id="context-heading">The numbers are the beginning. <em>Not the decision.</em></h2><p>We begin with an invented annual service budget and two clearly defined funding scenarios. The arithmetic is exact; the human consequences are qualitative prompts for deliberation, not measured forecasts.</p></div>
     <div class="lab-explainer-grid">
@@ -95,7 +95,42 @@
       <div class="lab-receipt"><div class="lab-receipt-header"><span>SCENARIO RECEIPT</span><strong id="receipt-status">Gap not yet closed</strong></div><div id="receipt-choices" class="lab-choices"><p>No choices selected yet.</p></div><dl class="lab-summary"><div><dt>Target</dt><dd id="receipt-target">$2,400,000</dd></div><div><dt>Addressed</dt><dd id="receipt-addressed">$0</dd></div><div><dt>Remaining / surplus</dt><dd id="receipt-balance">$2,400,000 remaining</dd></div></dl></div>
       <div class="lab-reflection"><span class="lab-mini-label">BEFORE ANY REAL DECISION</span><h3>What this model cannot tell you</h3><ul><li>Whether a service reduction is lawful, feasible or safe.</li><li>Who bears the costs and who receives the benefits.</li><li>Whether modeled revenue would actually be collected.</li><li>What happens in later years or under economic changes.</li><li>Whether residents or their representatives support a choice.</li></ul><a href="commonwealth-warrant.html">Explore Commonwealth's evidence Warrant ↗</a></div>
     </div>
-    <div class="lab-share"><div><h3>Keep a private, inspectable record.</h3><p>Copy a plain-language summary or download a machine-readable JSON receipt. Both are created on your device only; neither counts as a submitted budget.</p><p id="action-message" class="lab-action-message" role="status" aria-live="polite"></p><textarea id="copy-fallback" hidden readonly aria-label="Copyable scenario summary"></textarea></div><div class="lab-share-actions"><button id="copy-plan" type="button" class="lab-button lab-primary">Copy summary</button><button id="download-plan" type="button" class="lab-button lab-secondary">Download JSON receipt</button><button id="reset-plan" type="button" class="lab-button lab-link">Reset all choices</button></div></div>
+    
+    <section class="lab-civic-bridge" id="living-voter-decision" aria-labelledby="living-voter-decision-title">
+      <div class="lab-bridge-heading"><p class="eyebrow">04 / LIVING VOTER · VOLUNTARY</p><h3 id="living-voter-decision-title">A budget is a question of <em>representation.</em></h3>
+        <p>Now that you have seen the costs, would you support <strong>this exact fictional package</strong>? State a hypothetical preference, or leave it unstated. The choice is attached only to the currently visible plan; editing the numbers clears it.</p></div>
+      <fieldset id="lab-voter-stance" class="lab-voter-fieldset">
+        <legend>How would you respond to the Harborview budget package displayed above?</legend>
+        <div class="lab-stance-options">
+          <label><input type="radio" name="lab-stance" value="support"><span>Support this package</span></label>
+          <label><input type="radio" name="lab-stance" value="oppose"><span>Oppose this package</span></label>
+          <label><input type="radio" name="lab-stance" value="unsure"><span>Need more evidence</span></label>
+          <label><input type="radio" name="lab-stance" value="no-preference"><span>No preference</span></label>
+        </div>
+      </fieldset>
+      <p class="lab-stance-status" id="lab-stance-status" role="status" aria-live="polite">No position stated.</p>
+      <p class="lab-civic-note"><strong>Living Voter boundary:</strong> This is a private, in-memory illustration of one voluntary stance. It is not a poll, ballot, durable Living Voter profile, representative comparison or transmission. <a href="commonwealth-demos/living-voter.html#preview-top">Visit the separate Living Voter demonstration ↗</a> (this plan and stance do not transfer).</p>
+    </section>
+    <section class="lab-civic-bridge lab-warrant-bridge" id="plan-warrant" aria-labelledby="plan-warrant-title">
+      <div class="lab-bridge-heading"><p class="eyebrow">05 / THE WARRANT · LIVE EVIDENCE AND COSTS</p><h3 id="plan-warrant-title">Every claim needs <em>a Warrant.</em></h3>
+        <p>Your selections, fiscal arithmetic, qualitative consequences and evidence gaps are assembled into an <strong>illustrative Warrant</strong>. The fiscal calculation is reproducible within this teaching model; its assumptions and real-world impacts are not independently established.</p></div>
+      <div class="lab-warrant-id"><span>DECISION RECORD / CW-W-HARBORVIEW-001</span><strong>ILLUSTRATIVE ONLY · NO AUTHORITY</strong></div>
+      <div class="lab-warrant-grid">
+        <article><span>01 / AUTHORITY</span><strong>NOT ESTABLISHED</strong><p>No actual municipal jurisdiction, approved fiscal appropriation or decision-making power.</p></article>
+        <article><span>02 / EVIDENCE</span><strong>SYNTHETIC SOURCE</strong><p>Authored exercise fixture <code>CW-SYN-HARBORVIEW-BUDGET-01</code>; no authenticated budget data.</p></article>
+        <article><span>03 / FISCAL REPLAY</span><strong id="warrant-covered">$0 addressed</strong><p><span id="warrant-gap">$2,400,000 target</span>. The model recomputes cuts, added revenues, remaining gap and surplus in whole dollars.</p></article>
+        <article><span>04 / IMPACTS</span><strong>NOT ASSESSED</strong><p>Distributional equity, actual costs, revenue realization, time horizon and legal feasibility are unknown.</p></article>
+        <article><span>05 / REPRESENTATION</span><strong>NO RECORD</strong><p>No historical member vote, legislative correspondence or resident population sample is attached to this fictional question.</p></article>
+        <article><span>06 / ASSURANCE</span><strong>ARITHMETIC ONLY</strong><p>The deterministic model has automated arithmetic regression tests; no fiscal audit, legal review or election certification.</p></article>
+      </div>
+      <div class="lab-warrant-detail">
+        <div><h4>Selected costs, revenue and affected services</h4><div id="warrant-impacts" aria-live="polite"><p>Change the budget options to inspect the associated costs and qualitative impacts.</p></div></div>
+        <div><h4>Current decision state</h4><dl class="lab-warrant-facts"><div><dt>Source version</dt><dd id="warrant-model-version">commonwealth-civic-tradeoffs/v1</dd></div><div><dt>Scenario</dt><dd id="warrant-scenario">Baseline exercise</dd></div><div><dt>Calculated balance</dt><dd id="warrant-balance">$2,400,000 remaining</dd></div><div><dt>Private hypothetical stance</dt><dd id="warrant-stance">Not stated</dd></div><div><dt>Official decision</dt><dd>None</dd></div></dl></div>
+      </div>
+      <p class="lab-civic-note"><strong>Scope:</strong> A correctly replayed sum is not proof that a tax, cut or public decision is lawful, fair, enforceable or effective. The downloadable record includes the illustrative Warrant and its explicit unknowns. <a href="commonwealth-warrant.html#budget-warrant">Inspect the public Warrant framework and budget example ↗</a></p>
+    </section>
+
+    <div class="lab-share"><div><h3>Keep a private, inspectable record.</h3><p>Copy a plain-language summary or download a machine-readable JSON receipt. Both are created on your device only and include the selected illustrative Warrant and any explicitly stated hypothetical stance; neither counts as an official submission.</p><p id="action-message" class="lab-action-message" role="status" aria-live="polite"></p><textarea id="copy-fallback" hidden readonly aria-label="Copyable scenario summary"></textarea></div><div class="lab-share-actions"><button id="copy-plan" type="button" class="lab-button lab-primary">Copy summary</button><button id="download-plan" type="button" class="lab-button lab-secondary">Download JSON receipt</button><button id="reset-plan" type="button" class="lab-button lab-link">Reset all choices</button></div></div>
   </section>
   <section class="lab-assumptions" id="assumptions" aria-labelledby="assumptions-heading"><div class="lab-wrap">
     <div class="lab-section-heading"><p class="eyebrow">METHODOLOGY / SCOPE</p><h2 id="assumptions-heading">Show the workings.</h2><p>Every number should travel with a plain-language explanation of what it represents and what it leaves out.</p></div>
