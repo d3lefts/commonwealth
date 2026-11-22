@@ -54,8 +54,9 @@
       "source_sha256": "c7c3bb33e3eaf18a9b5bc2cc947c4ad4de5d5d2629ceb5c30ac39e69faab5209"
     },
     "commonwealth-browser/app.mjs": {
-      "published_sha256": "bd7aa24df595d677d0080122205cdd6b46683af99b61607f39fedb85f2f6b049",
-      "source_sha256": "bd7aa24df595d677d0080122205cdd6b46683af99b61607f39fedb85f2f6b049"
+      "published_sha256": "09324f7da6a7f349efe13845dc9668138e007c6962823e3fb21802411bc52151",
+      "source_sha256": "bd7aa24df595d677d0080122205cdd6b46683af99b61607f39fedb85f2f6b049",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "commonwealth-browser/core.mjs": {
       "published_sha256": "417f40b6607c1f7ea84861e8103a1d9d98a5d64d011d2964a54500d1e892423a",
@@ -74,20 +75,24 @@
       "source_sha256": "0ae25a20b94bd1db5148762698c7926c93b035989d4d739ecdb99bb0c56e547b"
     },
     "commonwealth-browser/index.html": {
-      "published_sha256": "1a45367ad5827a7fa8e20feaf13800d1efe0983612aaace13c714710c3a19748",
-      "source_sha256": "f901dc38a02553145915438092f3e79599ef388ba9603921cc6b856662396baa"
+      "published_sha256": "c04bf25f1a52e299bc7f744f3a2d785dd4a0f64face17664d4d4a3fcfd2b92fa",
+      "source_sha256": "f901dc38a02553145915438092f3e79599ef388ba9603921cc6b856662396baa",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "commonwealth-browser/participation-core.mjs": {
-      "published_sha256": "2d32f8bfa745601886805aa42cff6ce91c0d9b522acf11942fd224444c4dfc45",
-      "source_sha256": "2d32f8bfa745601886805aa42cff6ce91c0d9b522acf11942fd224444c4dfc45"
+      "published_sha256": "42087d37826bcfc3f3e3125a80c7ab900a9bbf673efc7fbe876c4ccf58220ea9",
+      "source_sha256": "2d32f8bfa745601886805aa42cff6ce91c0d9b522acf11942fd224444c4dfc45",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "commonwealth-browser/participation-section.html": {
-      "published_sha256": "58198f480620ba22793992e60effebfef5d692917bd3cb7327593488ca76cbd4",
-      "source_sha256": "58198f480620ba22793992e60effebfef5d692917bd3cb7327593488ca76cbd4"
+      "published_sha256": "4fea85cb8e877a2abafedef77d8a938e17d1235e1271c49579b90e063f3c4220",
+      "source_sha256": "58198f480620ba22793992e60effebfef5d692917bd3cb7327593488ca76cbd4",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "commonwealth-browser/participation-ui.mjs": {
-      "published_sha256": "302908b45772043a394357af9a345ed1eba5ef29867e9d0a963090a389aeb66b",
-      "source_sha256": "302908b45772043a394357af9a345ed1eba5ef29867e9d0a963090a389aeb66b"
+      "published_sha256": "9214332785e3dd4c1e1a8d63653e15b7fb35dfe566ca0a888c3d6804a0122dcc",
+      "source_sha256": "302908b45772043a394357af9a345ed1eba5ef29867e9d0a963090a389aeb66b",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "commonwealth-browser/participation.css": {
       "published_sha256": "f02693f21694683ff89048a5bc49e8ff7090108da7f9088b80770c6a7f793215",
@@ -106,12 +111,14 @@
       "source_sha256": "6b8795583bbe6d528b1377fc16b7b0fc3b9dfdc9c0034ef85c482f84bf5d74c5"
     },
     "commonwealth-browser/workspace.mjs": {
-      "published_sha256": "41102d12d40b1b137f8b8a792d1650696a3d6c1f7a4bb093048ded7f892212ed",
-      "source_sha256": "41102d12d40b1b137f8b8a792d1650696a3d6c1f7a4bb093048ded7f892212ed"
+      "published_sha256": "899ab091d412cd53c50130d55366bc03e50947969d5e2d0946943cd823b9479d",
+      "source_sha256": "41102d12d40b1b137f8b8a792d1650696a3d6c1f7a4bb093048ded7f892212ed",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "commonwealth-demos/living-voter.html": {
-      "published_sha256": "abc31211c36b1b6ea117b9904a954fd6c9b73cec9df745547cc6cf66620f9d1d",
-      "source_sha256": "abc31211c36b1b6ea117b9904a954fd6c9b73cec9df745547cc6cf66620f9d1d"
+      "published_sha256": "fe1444f4f46637e51b71341b80897232757ace67764ed315008041c109352c93",
+      "source_sha256": "abc31211c36b1b6ea117b9904a954fd6c9b73cec9df745547cc6cf66620f9d1d",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "commonwealth-family.css": {
       "published_sha256": "b2c07439c49ab3c7f0e1971555cd15b3d831375771f7e61fa3247d590f043461",
@@ -138,8 +145,9 @@
       "source_sha256": "b5452c15473542fc9f7f943dbf6d2ba906e48001e6f951f291f3cc5ae107d565"
     },
     "commonwealth-intelligence.html": {
-      "published_sha256": "f48288f42768897884986c5f8dc4eb8bfb6acc14264a2230ec486ce5c9bf8d97",
-      "source_sha256": "85597186f1f5c5f443f453445a94325b64695e8fbb43441808584a0aaea594b3"
+      "published_sha256": "1c8816dc6fc5909804d09a3ab917c0604b86fc16940c128c80b3d78e6f081179",
+      "source_sha256": "85597186f1f5c5f443f453445a94325b64695e8fbb43441808584a0aaea594b3",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "commonwealth-intelligence.js": {
       "published_sha256": "af244d50dcdd9d30fee4edc9a1c7ed41675f11d462def1407bc4d343197abdf1",
@@ -154,8 +162,9 @@
       "source_sha256": "7ebaea8cf2e57f9e1c76bed104c2b0c85428e8876303cb7f58d23423038b4386"
     },
     "commonwealth-os.html": {
-      "published_sha256": "2e432ff76928bb8f46912d79d9784dd0855c8340e5b2753710fe4e8e0e8da766",
-      "source_sha256": "36898a7d3153069813243337d6483b7b0b5c99e2f450d6ac8c1728e0be29edcc"
+      "published_sha256": "a354f3d303225e8b711e64790774018e81c25ba494847e804c0a2fd7f177928c",
+      "source_sha256": "36898a7d3153069813243337d6483b7b0b5c99e2f450d6ac8c1728e0be29edcc",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "commonwealth-os.js": {
       "published_sha256": "4d7b4149c66bb8653acb3e0ced5816eee2093bf0811dbba428e9f0859edbf281",
@@ -179,21 +188,23 @@
       "source_sha256": "d50a769ae69fab83db927b07779fb38b952d7556760168dba9a8f28ca4257a7f"
     },
     "commonwealth.html": {
-      "published_sha256": "5acb3fdf39076b76626e31975fbbb32bddf78c5e8acd83d7d5230a0a46dc6dac",
+      "published_sha256": "ac01f299ec778fffbf17fd7f271361c818a663df95028f33fa957e787c2abcab",
       "source_sha256": "be7cab3eb313c0e1daa6fc356eaaaf940eb61f846c4f56c0f2a642b760c5af82",
-      "independent_site_edit": "Retains historical source digest; independent site added the guided journey and fictional civic trade-off exercise."
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "index.html": {
       "source_sha256": "5acb3fdf39076b76626e31975fbbb32bddf78c5e8acd83d7d5230a0a46dc6dac",
-      "published_sha256": "5acb3fdf39076b76626e31975fbbb32bddf78c5e8acd83d7d5230a0a46dc6dac",
+      "published_sha256": "ac01f299ec778fffbf17fd7f271361c818a663df95028f33fa957e787c2abcab",
       "source_repository": "d3lefts/commonwealth",
-      "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
+      "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "journey.html": {
       "source_sha256": "cb1ad3f9ff322f9d6fb35935b408c1259255fd15bbb9f5eab88f98a80566d656",
-      "published_sha256": "71bc5a14d4c9c2329570a93b7e8dd5f2e3e989bc0e050a27af3ef23a6a6806d6",
+      "published_sha256": "3d3cac01bfa76a926ca3e6f6f9c3f2c55caaebc456d9dba602b78efd13c89334",
       "source_repository": "d3lefts/commonwealth",
-      "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit"
+      "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "sitemap.xml": {
       "source_sha256": "7bcf7b31331f3bd7d9879a40958b9d6cc7f102b8f2edac5cef9c90d5b7c83c66",
@@ -224,17 +235,19 @@
     },
     "commonwealth-warrant.html": {
       "source_sha256": "b3e331a474c6b911a4881472eacc53db1167f1bd9574bd3ee82d00d45384bf75",
-      "published_sha256": "b3e331a474c6b911a4881472eacc53db1167f1bd9574bd3ee82d00d45384bf75",
+      "published_sha256": "68fe34cb5d33cda2e044131da293650481058a46aafc39e91a082ec65d6a4367",
       "source_repository": "d3lefts/d3lefts",
       "source_ref": "1eac242d5b6250b50ee4d0d05e8e38aaadf08ca9",
-      "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth"
+      "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "commonwealth-warrant.css": {
       "source_sha256": "7ef02ca1ba4f87a84fbf9810c04db1993cd4ea0efa28cb83082d2c241fc05205",
-      "published_sha256": "7ef02ca1ba4f87a84fbf9810c04db1993cd4ea0efa28cb83082d2c241fc05205",
+      "published_sha256": "e6c7cdc2b6d02912cb6836a0230f6c5676ac0c205fa104faa34321c7e76372ee",
       "source_repository": "d3lefts/d3lefts",
       "source_ref": "1eac242d5b6250b50ee4d0d05e8e38aaadf08ca9",
-      "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth"
+      "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "commonwealth-warrant.mjs": {
       "source_sha256": "197247b5a51075521719061c8b0b7c19d06bee67b33e1d24b818524e3810b1fe",
@@ -244,28 +257,32 @@
       "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth"
     },
     "civic-tradeoffs.html": {
-      "published_sha256": "2edacdc4174c4b7cbd559dac22124857758e0ab1e614b33ba4b07ecbeff73fd9",
+      "published_sha256": "375c34a41ae9822008fc052ad13e630df068573ef6fefd0da6d929d756dab250",
       "source_sha256": "2edacdc4174c4b7cbd559dac22124857758e0ab1e614b33ba4b07ecbeff73fd9",
       "source_repository": "d3lefts/commonwealth",
-      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media."
+      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media.",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "civic-tradeoffs.css": {
-      "published_sha256": "1c20c83dfb3e92be5ab7cbf6d1b1cf99f1bf60c56901dffa227bbc6f1ac72a5b",
+      "published_sha256": "4f52d0e9c67a0bc7b51375812432565d736d0abc7cc859144d1c028a1872116f",
       "source_sha256": "1c20c83dfb3e92be5ab7cbf6d1b1cf99f1bf60c56901dffa227bbc6f1ac72a5b",
       "source_repository": "d3lefts/commonwealth",
-      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media."
+      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media.",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "civic-tradeoffs.mjs": {
-      "published_sha256": "2a744d00670f9d971420b1e4c2975dad11a8fbfd20c33563e7b3126f1dfe8202",
+      "published_sha256": "dd6eee2873aa23fb94b5ef728f9a0cee2510394949e66e5a3a92c7e65ab94351",
       "source_sha256": "2a744d00670f9d971420b1e4c2975dad11a8fbfd20c33563e7b3126f1dfe8202",
       "source_repository": "d3lefts/commonwealth",
-      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media."
+      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media.",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "civic-tradeoffs-core.mjs": {
-      "published_sha256": "9940d1a01151c7818e61a786ac5b16b75b9799743bedcd22d6de965e7b525a82",
+      "published_sha256": "9108cb63e4e0981be5115328cad1add51ee81a13cc132e72888d0f3cc72ee919",
       "source_sha256": "9940d1a01151c7818e61a786ac5b16b75b9799743bedcd22d6de965e7b525a82",
       "source_repository": "d3lefts/commonwealth",
-      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media."
+      "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media.",
+      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     }
   },
   "format": "commonwealth-static-release/v1",
@@ -276,8 +293,9 @@
   "source_repository": "d3lefts/d3lefts",
   "independent_release": {
     "repository": "d3lefts/commonwealth",
-    "purpose": "Source-scoped civic experience, guided decision tour, and fictional Warrant legal-evidence explorer; original fictional Civic Trade-off Lab",
+    "purpose": "Independent civic education with Living Voter, public/technical/process Warrants, fictional cost-and-tradeoff evidence, and historical-source demonstrations",
     "original_source_ref_unchanged": true,
-    "authority": "synthetic demonstrations only; not legal review or official ballot"
+    "authority": "synthetic demonstrations only; not legal review or official ballot",
+    "warrant_contract": "The Warrant family is illustrative; no legal, electoral or fiscal authority inferred from checksums or local arithmetic."
   }
 }
