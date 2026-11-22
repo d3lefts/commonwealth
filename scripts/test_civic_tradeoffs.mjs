@@ -1,6 +1,6 @@
 // Independent exact-arithmetic audit of the Commonwealth fictional budget model.
 import assert from "node:assert/strict";
-import {MODEL,evaluatePlan,receipt,exportedPlan} from "../site/civic-tradeoffs-core.mjs";
+import {MODEL,evaluatePlan,decisionWarrant,STANCES,WARRANT_ID,receipt,exportedPlan} from "../site/civic-tradeoffs-core.mjs";
 
 const opts=MODEL.options;
 assert.equal(opts.length,9);
@@ -32,6 +32,22 @@ for(const [name,s] of Object.entries(MODEL.scenarios)){
       assert.equal(p.targetMet,expectedCovered>=s.gap);
       assert.equal(p.remaining*p.surplus,0);
       assert.equal(s.gap+p.surplus,p.covered+p.remaining);
+      const w=decisionWarrant({scenario:name,selected,levy});
+      assert.equal(w.id,WARRANT_ID);
+      assert.equal(w.cost.covered,expectedCovered);
+      assert.equal(w.cost.reductions,expectedCut);
+      assert.equal(w.cost.revenue,expectedRevenue);
+      assert.equal(w.cost.remaining,p.remaining);
+      assert.equal(w.cost.surplus,p.surplus);
+      assert.equal(w.cost.gap,w.cost.services-w.cost.funding);
+      assert.equal(w.evidence.optionImpacts.length,selected.length);
+      assert.deepEqual(w.evidence.optionImpacts.map(o=>o.id),p.selected);
+      assert.equal(w.authority.status,"NOT_ESTABLISHED");
+      assert.equal(w.evidence.status,"SYNTHETIC_UNVERIFIED");
+      assert.equal(w.impacts.legalFeasibility,"UNKNOWN");
+      assert.equal(w.representation.status,"NO_COMPARABLE_RECORDED_VOTE");
+      assert.equal(w.assurance.status,"ARITHMETIC_REPLAY_SCOPE_ONLY");
+
     }
   }
 }
@@ -50,4 +66,16 @@ const json=JSON.parse(exportedPlan(p));
 assert.equal(json.calculation.covered,910000);
 assert.equal(json.calculation.targetMet,false);
 assert.equal(json.schema,"commonwealth-fictional-plan/v1");
-console.log("PASS: 16,384 synthetic scenarios, exact arithmetic, source boundaries, no double counting.");
+assert.equal(json.warrant.id,WARRANT_ID);
+assert.equal(json.warrant.livingVoter.stance,"not-stated");
+for(const stance of STANCES){
+ const w=decisionWarrant(p,stance);
+ assert.equal(w.livingVoter.stance,stance);
+ assert.equal(w.livingVoter.storedOrSubmitted,false);
+ assert.equal(JSON.parse(exportedPlan(p,stance)).warrant.livingVoter.stance,stance);
+ assert.match(receipt(p,stance),/THE WARRANT: CW-W-HARBORVIEW-001/);
+}
+assert.throws(()=>decisionWarrant(p,"official-vote"),RangeError);
+assert.throws(()=>receipt(p,"official-vote"),RangeError);
+
+console.log("PASS: 16,384 scenarios, independent Warrant cost replay, stance boundaries, source-status semantics and no double counting.");
