@@ -80,8 +80,8 @@ def audit(root: Path):
     assert 'href="../civic-tradeoffs.html#builder"' in voter
     # User-facing terminology: historic JS identifiers/anchors may remain for compatibility,
     # but the published narrative must call the artifacts Warrants, never Proof Passports.
-    legacy = re.compile(r'(?i)\\b(?:technical\\s+)?proof\\s+passports?\\b|'
-                        r'\\bdemocratic\\s+assurance\\s+passports?\\b|\\bevidence\\s+passport\\b')
+    legacy = re.compile(r'(?i)\b(?:technical\s+)?proof\s+passports?\b|'
+                        r'\bdemocratic\s+assurance\s+passports?\b|\bevidence\s+passport\b')
     for public in list(site.rglob("*.html")) + list(site.rglob("*.mjs")):
         assert not legacy.search(public.read_text(encoding="utf-8")), (
             "Legacy public terminology: " + str(public.relative_to(site)))
