@@ -129,7 +129,7 @@ async function exportCase(p){
   }catch(e){notice('No dossier exported: '+e.message,'error');return;}
  }
  const content=JSON.stringify(dossier,null,2);const blob=new Blob([content],{type:'application/json'});const url=URL.createObjectURL(blob),a=element('a');a.href=url;a.download='commonwealth-fictional-'+p.id+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);
- notice(backend?'Synthetic receipt signed by an UNVERIFIED local key; no legal authority or independent proof of source authenticity.':'Fictional public dossier downloaded without individual preference or comment bodies. It is not a signed Proof Passport.','ok');
+ notice(backend?'Synthetic receipt signed by an UNVERIFIED local key; no legal authority or independent proof of source authenticity.':'Fictional public dossier downloaded without individual preference or comment bodies. It is not an issued Warrant.','ok');
 }
 function renderBudget(){
  const list=empty(byId('cwpart-budget-projects'));
