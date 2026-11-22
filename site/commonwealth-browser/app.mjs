@@ -54,7 +54,7 @@ async function exportPassport(){
  },null,2);
  const blob=new Blob([bundle],{type:"application/json"});
  const url=URL.createObjectURL(blob),link=document.createElement("a");
- link.href=url;link.download="commonwealth-"+current.profileId+"-demo-passport.json";link.click();
+ link.href=url;link.download="commonwealth-"+current.profileId+"-demo-warrant.json";link.click();
  setTimeout(()=>URL.revokeObjectURL(url),5000);
 }
 async function verifyExport(){
