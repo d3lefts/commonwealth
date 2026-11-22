@@ -147,3 +147,42 @@ h1 em,h2 em{color:var(--gold);font-style:italic}
 @media(max-width:900px){.lab-hero-grid{grid-template-columns:1fr}.hero-ledger{max-width:550px}.lab-builder-layout{grid-template-columns:1fr}.lab-tally{position:static;grid-row:1}.lab-explainer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.lab-header-inner{align-items:flex-start;flex-direction:column}.lab-header nav{gap:15px}.lab-hero{padding-block:56px}.lab-stages a{font-size:11px}.lab-explainer-grid,.lab-review-grid,.lab-share{grid-template-columns:1fr}.lab-scenario-options{grid-template-columns:1fr}.lab-option{grid-template-columns:auto minmax(0,1fr)}.lab-option-amount{grid-column:2}.lab-tally{padding:22px}.lab-target{font-size:36px}.lab-hero-actions{flex-direction:column;align-items:stretch}.lab-hero-actions .lab-button{justify-content:center}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lab-button{transition:none}}
+
+/* Joined civic decision: voluntary Living Voter choice and a scoped, live Warrant. */
+.lab-civic-bridge{margin-top:28px;padding:clamp(22px,4vw,40px);border:1px solid var(--line);background:#162f4c;scroll-margin-top:24px}
+.lab-warrant-bridge{background:#1b344e}
+.lab-bridge-heading{max-width:850px}
+.lab-bridge-heading h3{font-size:clamp(29px,4vw,44px);line-height:1.14;letter-spacing:-.035em;margin:10px 0 15px}
+.lab-bridge-heading h3 em{color:var(--gold)}
+.lab-bridge-heading>p:not(.eyebrow){color:#d6dfe7;font-size:14px;line-height:1.8}
+.lab-voter-fieldset{margin:24px 0 0;padding:21px;border:1px solid #9f9582}
+.lab-voter-fieldset legend{font-weight:700;font-size:13px;padding:0 8px;color:#f5e4c1}
+.lab-stance-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.lab-stance-options label{display:flex;gap:11px;align-items:center;min-height:57px;padding:13px;border:1px solid #8a8f91;background:#213f5c;cursor:pointer;color:#f4ebda;font-weight:650;font-size:13px}
+.lab-stance-options label:has(input:checked){background:#425b6b;box-shadow:inset 3px 0 #e8c788;border-color:#e8c788}
+.lab-stance-options input{accent-color:#e9c787;width:18px;height:18px;flex:none}
+.lab-stance-status{font-weight:700;font-size:13px;color:#f4dba5;margin:17px 0}
+.lab-civic-note{color:#cdd8e2;font-size:12px;line-height:1.8;border-left:2px solid var(--gold);padding-left:16px;max-width:900px}
+.lab-civic-note a{color:#f3d99c}
+.lab-warrant-id{display:flex;align-items:center;justify-content:space-between;gap:13px;flex-wrap:wrap;padding:15px 0;margin:26px 0 16px;border-block:1px solid var(--line);font-size:10px;letter-spacing:.11em}
+.lab-warrant-id strong{color:#efc18c}
+.lab-warrant-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.lab-warrant-grid article{border:1px solid #687b82;background:#213c58;padding:18px;min-width:0}
+.lab-warrant-grid article>span{display:block;font-size:10px;letter-spacing:.13em;color:#edce98;font-weight:750;margin-bottom:12px}
+.lab-warrant-grid article>strong{display:block;font-size:14px;color:#faf0da;line-height:1.4;overflow-wrap:anywhere}
+.lab-warrant-grid article p{font-size:12px;color:#d1dae2;line-height:1.65}
+.lab-warrant-grid article code{overflow-wrap:anywhere;font-size:11px}
+.lab-warrant-detail{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(240px,.7fr);gap:18px;margin:20px 0}
+.lab-warrant-detail>div{padding:23px;border:1px solid var(--line);background:#0d263f;min-width:0}
+.lab-warrant-detail h4{font:400 22px Georgia,serif;color:#f3e7d3;margin:0 0 15px}
+.lab-warrant-detail p{color:#cdd8e0;font-size:12px;line-height:1.7}
+.lab-impact-list{list-style:none;margin:0;padding:0}
+.lab-impact-list li{border-top:1px solid var(--line);padding:12px 0}
+.lab-impact-list li strong{font-size:13px;color:#edd5a2}
+.lab-impact-list li p{margin:5px 0}
+.lab-warrant-facts{margin:0}
+.lab-warrant-facts div{padding:10px 0;border-bottom:1px solid var(--line)}
+.lab-warrant-facts dt{font-size:11px;color:#b9cbd9}
+.lab-warrant-facts dd{font-size:12px;font-weight:650;margin:4px 0 0;overflow-wrap:anywhere;color:#f6e8ce}
+@media(max-width:850px){.lab-warrant-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lab-warrant-detail{grid-template-columns:1fr}}
+@media(max-width:520px){.lab-stance-options,.lab-warrant-grid{grid-template-columns:1fr}.lab-civic-bridge{padding:19px}.lab-warrant-id{flex-direction:column;align-items:flex-start}}
