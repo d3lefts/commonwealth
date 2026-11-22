@@ -278,11 +278,11 @@
       "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
     },
     "civic-tradeoffs-core.mjs": {
-      "published_sha256": "9108cb63e4e0981be5115328cad1add51ee81a13cc132e72888d0f3cc72ee919",
+      "published_sha256": "4eacc397948cd11ebf893a1f3c0d6739f4b9aa66b1db0c1f7f6ba0413683e0d5",
       "source_sha256": "9940d1a01151c7818e61a786ac5b16b75b9799743bedcd22d6de965e7b525a82",
       "source_repository": "d3lefts/commonwealth",
       "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media.",
-      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
+      "independent_site_edit": "2026-11-22: full cost/impact/name Warrant fields included; source provenance retained."
     }
   },
   "format": "commonwealth-static-release/v1",
