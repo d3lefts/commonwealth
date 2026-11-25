@@ -188,16 +188,16 @@
       "source_sha256": "d50a769ae69fab83db927b07779fb38b952d7556760168dba9a8f28ca4257a7f"
     },
     "commonwealth.html": {
-      "published_sha256": "ac01f299ec778fffbf17fd7f271361c818a663df95028f33fa957e787c2abcab",
+      "published_sha256": "3035a8a617deded60d285b9dc9351b10cfba5fdad8ba387f16c62d3cd767fe27",
       "source_sha256": "be7cab3eb313c0e1daa6fc356eaaaf940eb61f846c4f56c0f2a642b760c5af82",
-      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
+      "independent_site_edit": "2026-11-24: original legislative stress-test integration; historical source hash retained."
     },
     "index.html": {
       "source_sha256": "5acb3fdf39076b76626e31975fbbb32bddf78c5e8acd83d7d5230a0a46dc6dac",
-      "published_sha256": "ac01f299ec778fffbf17fd7f271361c818a663df95028f33fa957e787c2abcab",
+      "published_sha256": "3035a8a617deded60d285b9dc9351b10cfba5fdad8ba387f16c62d3cd767fe27",
       "source_repository": "d3lefts/commonwealth",
       "provenance_scope": "independent product-owned asset; not part of historical NIGHTFALL source commit",
-      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
+      "independent_site_edit": "2026-11-24: original legislative stress-test integration; historical source hash retained."
     },
     "journey.html": {
       "source_sha256": "cb1ad3f9ff322f9d6fb35935b408c1259255fd15bbb9f5eab88f98a80566d656",
@@ -235,11 +235,11 @@
     },
     "commonwealth-warrant.html": {
       "source_sha256": "b3e331a474c6b911a4881472eacc53db1167f1bd9574bd3ee82d00d45384bf75",
-      "published_sha256": "68fe34cb5d33cda2e044131da293650481058a46aafc39e91a082ec65d6a4367",
+      "published_sha256": "95df57fd64ebd2432d9015cbeea438c2caf8396c4c648f59f6869785a6fe8f20",
       "source_repository": "d3lefts/d3lefts",
       "source_ref": "1eac242d5b6250b50ee4d0d05e8e38aaadf08ca9",
       "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth",
-      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
+      "independent_site_edit": "2026-11-24: original legislative stress-test integration; historical source hash retained."
     },
     "commonwealth-warrant.css": {
       "source_sha256": "7ef02ca1ba4f87a84fbf9810c04db1993cd4ea0efa28cb83082d2c241fc05205",
@@ -283,6 +283,12 @@
       "source_repository": "d3lefts/commonwealth",
       "provenance_scope": "Original synthetic Commonwealth Civic Trade-off Lab; external site contributed interaction concepts only, no copied code or media.",
       "independent_site_edit": "2026-11-22: full cost/impact/name Warrant fields included; source provenance retained."
+    },
+    "commonwealth-legislative-stress.mjs": {
+      "source_sha256": "d497d67b341c5092e045b48c4d77ae5dc44cc6483ab5f9a1172b2062c0e8e642",
+      "published_sha256": "d497d67b341c5092e045b48c4d77ae5dc44cc6483ab5f9a1172b2062c0e8e642",
+      "source_repository": "d3lefts/commonwealth",
+      "provenance_scope": "Original fictional Commonwealth legislative stress test; Lexifina contributed research concepts only."
     }
   },
   "format": "commonwealth-static-release/v1",

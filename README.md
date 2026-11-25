@@ -74,3 +74,7 @@ Copy and JSON export carry the model and (only if explicitly provided) the hypot
 The independent model test replays **16,384** plan configurations and independently checks Warrant cost arithmetic and evidence statuses. Browser CI tests stance resets, source links and accessible phone/desktop layouts. The static audit rejects obsolete public-facing Proof Passport terminology. All site assets and root mirrors remain pinned by the release SHA-256 manifest.
 
 Real fiscal imports, data custody, resident participation, policy predictions, ballot functions, and institutional Warrants require explicit jurisdiction, consent, verified sources, privacy/security testing and human approval.
+
+## Legislative stress test (fictional)
+
+[Explore the rule amendment example](https://d3lefts.github.io/commonwealth/commonwealth-warrant.html#legislative-stress). Inspired by Alan Yahya's Lexifina research on executable, versioned law, Commonwealth adds an original dated benefit-rule fixture and exact finite-domain counterexample search under The Warrant. Read [the research transfer contract](research/legislative-stress-test.md). Replay with `node scripts/test_legislative_stress.mjs`. No real law, tax calculation, legal review, Lean certification or policy recommendation is claimed.
