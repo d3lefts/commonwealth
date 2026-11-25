@@ -52,7 +52,8 @@ theorem v1_cliff_exact : net .v1 1000 = 1100 ∧ net .v1 1001 = 1001 := by
 /-- The original rule has exactly one adjacent decrease, on all natural inputs. -/
 theorem v1_unique_cliff (x : Nat) :
     net .v1 (x + 1) < net .v1 x ↔ x = 1000 := by
-  unfold net grant cliffGrant
+  change x + 1 + cliffGrant 1000 100 (x + 1) < x + cliffGrant 1000 100 x ↔ x = 1000
+  unfold cliffGrant
   split <;> split <;> omega
 
 theorem v2_monotone (x y : Nat) (h : x ≤ y) :
