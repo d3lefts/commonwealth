@@ -100,5 +100,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate ten public routes and assets against committed SHA-256
+      - name: Validate all manifest-pinned public assets against committed SHA-256
         run: python3 scripts/test_live_site.py

@@ -13,11 +13,8 @@ SITE = ROOT / "site"
 manifest = json.loads((SITE / "build-manifest.json").read_text(encoding="utf-8"))
 base = manifest["site_origin"]
 assert base == "https://d3lefts.github.io/commonwealth/"
-paths = ["", "commonwealth.html", "commonwealth-os.html",
-         "commonwealth-intelligence.html", "commonwealth-browser/index.html",
-         "commonwealth-demos/living-voter.html", "journey.html", "commonwealth-guided.css",
-         "commonwealth-guided.js", "commonwealth-shell.css",
-         "commonwealth-shell.js", "commonwealth-mark.svg", "build-manifest.json"]
+# Verify every manifest-pinned asset, canonical root, manifest and sitemap.
+paths = sorted(set(manifest["files"]) | {"", "build-manifest.json", "sitemap.xml"})
 for path in paths:
     local = SITE / (path or "index.html")
     expected = hashlib.sha256(local.read_bytes()).hexdigest()
@@ -32,13 +29,15 @@ for path in paths:
                 data = response.read()
                 content_type = response.headers.get("Content-Type", "")
                 assert response.status == 200, (path, response.status)
-                assert ("/" not in path or True) # no mutation; paths are allowlisted
                 assert hashlib.sha256(data).hexdigest() == expected, (
                     path, "body differs from committed static release", len(data), len(local.read_bytes()))
                 if path.endswith(".html") or path == "":
                     assert "html" in content_type, (path, content_type)
                 if path.endswith(".css"):
                     assert "css" in content_type, (path, content_type)
+                if path.endswith((".js", ".mjs")):
+                    assert "javascript" in content_type or "ecmascript" in content_type, (path, content_type)
+                assert response.geturl().startswith(base), (path, response.geturl())
                 print("PASS", path or "/", len(data), expected[:16], flush=True)
                 break
         except (HTTPError, URLError, AssertionError, TimeoutError, OSError) as exc:
