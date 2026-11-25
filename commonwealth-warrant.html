@@ -85,7 +85,7 @@
   <div class="cw-warrant-grid">
     <article><span>01 / VERSION</span><h3>Which rule applies?</h3><p>v1 begins January 1, 2026. v2 begins January 1, 2027. Use a date in the example, not the newest text indiscriminately.</p></article>
     <article><span>02 / COUNTEREXAMPLE</span><h3>Does earning more leave less?</h3><p>At $1,000 the original rule leaves $1,100. At $1,001 it leaves $1,001: a $99 decrease. The amendment removes this particular cliff within the modeled domain.</p></article>
-    <article><span>03 / ASSURANCE</span><h3>What does the check establish?</h3><p>Only exact arithmetic and an exhaustive finite-domain comparison for integer earnings from $0 to $2,000. No legal interpretation, independent legal review, fiscal impact, consent or Lean certificate is claimed.</p></article>
+    <article><span>03 / ASSURANCE</span><h3>What does the check establish?</h3><p>Lean verifies the fictional rule specification: the original has a unique cliff and the amendment is monotone over all nonnegative integer earnings. The browser agrees with the formal model across its finite input domain. No legal interpretation, legal review, fiscal impact or consent is established.</p></article>
   </div>
   <div class="cw-warrant-board">
     <div class="cw-warrant-view">
@@ -93,7 +93,8 @@
       <p><label for="cw-stress-date">Example effective date</label> <select id="cw-stress-date"><option value="2026-12-31">December 31, 2026 — v1</option><option value="2027-01-01">January 1, 2027 — v2</option></select></p>
       <p><label for="cw-stress-income">Invented monthly earnings: <output id="cw-stress-income-label">$1000</output></label> <input id="cw-stress-income" type="range" min="0" max="1999" step="1" value="1000"></p>
       <p id="cw-stress-result" role="status" aria-live="polite">v1: earning one more dollar at $1,000 reduces modeled resources by $99.</p>
-      <p><strong>Illustrative technical-check Warrant:</strong> CW-W-STRESS-001 · SYNTHETIC_UNVERIFIED · FINITE_DOMAIN_ARITHMETIC_ONLY · LEGAL_AUTHORITY_NOT_ESTABLISHED.</p>
+      <p><strong>Illustrative technical-check Warrant:</strong> CW-W-STRESS-001 · SYNTHETIC_UNVERIFIED · LEAN_MODEL_CHECKED · FINITE_DOMAIN_IMPLEMENTATION_AGREEMENT · LEGAL_AUTHORITY_NOT_ESTABLISHED.</p>
+      <p><strong>Technical evidence:</strong> 14 Lean theorems; 4,002 income and 1,848 calendar evaluations compared with JavaScript. <a href="https://github.com/d3lefts/commonwealth/blob/d3959dc9a66fc570c51e5edba2a7d93fc34da035/lean/LegislativeStress.lean">Formal specification and proofs</a> · <a href="https://github.com/d3lefts/commonwealth/actions/runs/45553699274/job/139000596752">Kernel and replay receipt</a>.</p>
       <p>Research inspiration: Alan Yahya, Lexifina, <a href="https://lexifina.com/blog/formalizing-the-us-tax-code">Formalizing the US tax code</a> and <a href="https://lexifina.com/blog/one-master-equation-for-all-global-tax">One master equation for all global tax</a>. Commonwealth's implementation is original; no tax model or certification is imported.</p>
     </div>
   </div>

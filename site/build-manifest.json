@@ -235,11 +235,11 @@
     },
     "commonwealth-warrant.html": {
       "source_sha256": "b3e331a474c6b911a4881472eacc53db1167f1bd9574bd3ee82d00d45384bf75",
-      "published_sha256": "95df57fd64ebd2432d9015cbeea438c2caf8396c4c648f59f6869785a6fe8f20",
+      "published_sha256": "8ac713581b9174f2c4548bcec4df81460a08d875335222d66411409d87a40b08",
       "source_repository": "d3lefts/d3lefts",
       "source_ref": "1eac242d5b6250b50ee4d0d05e8e38aaadf08ca9",
       "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth",
-      "independent_site_edit": "2026-11-24: original legislative stress-test integration; historical source hash retained."
+      "independent_site_edit": "2026-11-24: legislative stress test and scoped Lean verification evidence; historical source hash retained."
     },
     "commonwealth-warrant.css": {
       "source_sha256": "7ef02ca1ba4f87a84fbf9810c04db1993cd4ea0efa28cb83082d2c241fc05205",
