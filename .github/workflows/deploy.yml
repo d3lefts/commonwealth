@@ -5,6 +5,8 @@ on:
     paths:
       - ".github/workflows/deploy.yml"
       - "scripts/**"
+      - "lean/**"
+      - "lean-toolchain"
       - "site/**"
       - "README.md"
       - "index.html"
@@ -16,6 +18,8 @@ on:
     paths:
       - ".github/workflows/deploy.yml"
       - "scripts/**"
+      - "lean/**"
+      - "lean-toolchain"
       - "site/**"
       - "README.md"
       - "index.html"
@@ -41,6 +45,18 @@ jobs:
         run: node scripts/test_civic_tradeoffs.mjs
       - name: Audit dated legislative stress-test arithmetic
         run: node scripts/test_legislative_stress.mjs
+      - name: Install pinned Lean toolchain
+        run: |
+          curl --fail --silent --show-error --location https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/elan" toolchain install "$(cat lean-toolchain)"
+      - name: Kernel-check legislative theorems and replay formal semantics
+        run: |
+          set -o pipefail
+          lean --version
+          lean --run lean/LegislativeStress.lean > "$RUNNER_TEMP/legislative-lean.txt" || { cat "$RUNNER_TEMP/legislative-lean.txt"; exit 1; }
+          grep -v '^CW|' "$RUNNER_TEMP/legislative-lean.txt"
+          node scripts/test_legislative_lean_bridge.mjs "$RUNNER_TEMP/legislative-lean.txt"
       - name: Browser-test civic journeys on phone and desktop
         run: |
           CHROME_BIN="$(command -v google-chrome)" \
