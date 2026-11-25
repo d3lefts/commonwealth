@@ -54,7 +54,7 @@ jobs:
         run: |
           set -o pipefail
           lean --version
-          lean --run lean/LegislativeStress.lean > "$RUNNER_TEMP/legislative-lean.txt"
+          lean --run lean/LegislativeStress.lean > "$RUNNER_TEMP/legislative-lean.txt" || { cat "$RUNNER_TEMP/legislative-lean.txt"; exit 1; }
           grep -v '^CW|' "$RUNNER_TEMP/legislative-lean.txt"
           node scripts/test_legislative_lean_bridge.mjs "$RUNNER_TEMP/legislative-lean.txt"
       - name: Browser-test civic journeys on phone and desktop
