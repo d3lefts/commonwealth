@@ -93,6 +93,25 @@
       <p><label for="cw-stress-date">Example effective date</label> <select id="cw-stress-date"><option value="2026-12-31">December 31, 2026 — v1</option><option value="2027-01-01">January 1, 2027 — v2</option></select></p>
       <p><label for="cw-stress-income">Invented monthly earnings: <output id="cw-stress-income-label">$1000</output></label> <input id="cw-stress-income" type="range" min="0" max="1999" step="1" value="1000"></p>
       <p id="cw-stress-result" role="status" aria-live="polite">v1: earning one more dollar at $1,000 reduces modeled resources by $99.</p>
+      <div class="cw-stress-controls">
+        <button type="button" class="cw-warrant-secondary" id="cw-stress-witness">Jump to the cliff ($1,000)</button>
+        <button type="button" class="cw-warrant-secondary" id="cw-stress-reset">Reset example</button>
+      </div>
+      <h4>Compare both rules on the same household</h4>
+      <div class="cw-stress-comparison">
+        <article aria-labelledby="cw-stress-v1-title">
+          <h5 id="cw-stress-v1-title">Original · v1 <span id="cw-stress-v1-active">Selected date</span></h5>
+          <dl><div><dt>Grant now</dt><dd id="cw-stress-v1-grant">$100</dd></div><div><dt>Resources now</dt><dd id="cw-stress-v1-net">$1,100</dd></div><div><dt>Resources after earning $1 more</dt><dd id="cw-stress-v1-next">$1,001</dd></div><div><dt>Change</dt><dd id="cw-stress-v1-change">−$99</dd></div></dl>
+        </article>
+        <article aria-labelledby="cw-stress-v2-title">
+          <h5 id="cw-stress-v2-title">Amendment · v2 <span id="cw-stress-v2-active" hidden>Selected date</span></h5>
+          <dl><div><dt>Grant now</dt><dd id="cw-stress-v2-grant">$100</dd></div><div><dt>Resources now</dt><dd id="cw-stress-v2-net">$1,100</dd></div><div><dt>Resources after earning $1 more</dt><dd id="cw-stress-v2-next">$1,100</dd></div><div><dt>Change</dt><dd id="cw-stress-v2-change">$0</dd></div></dl>
+        </article>
+      </div>
+      <p id="cw-stress-cost" role="status">Additional grant under amendment at this income: $0.</p>
+      <p><strong>Trade-off:</strong> The amendment prevents resources from falling as earnings rise, but resources remain flat between $1,000 and $1,100. The grant also extends to some previously ineligible households. Without household counts or a fiscal model, aggregate cost and behavioral effects are unknown.</p>
+      <p><button type="button" class="cw-warrant-secondary" id="cw-stress-export">Download technical-check Warrant (JSON)</button></p>
+      <p>Export contains only this invented scenario and its two computed rule outcomes, proof reference and limitations. Nothing is transmitted or stored by the page.</p>
       <p><strong>Illustrative technical-check Warrant:</strong> CW-W-STRESS-001 · SYNTHETIC_UNVERIFIED · LEAN_MODEL_CHECKED · FINITE_DOMAIN_IMPLEMENTATION_AGREEMENT · LEGAL_AUTHORITY_NOT_ESTABLISHED.</p>
       <p><strong>Technical evidence:</strong> 14 Lean theorems; 4,002 income and 1,848 calendar evaluations compared with JavaScript. <a href="https://github.com/d3lefts/commonwealth/blob/d3959dc9a66fc570c51e5edba2a7d93fc34da035/lean/LegislativeStress.lean">Formal specification and proofs</a> · <a href="https://github.com/d3lefts/commonwealth/actions/runs/45553699274/job/139000596752">Kernel and replay receipt</a>.</p>
       <p>Research inspiration: Alan Yahya, Lexifina, <a href="https://lexifina.com/blog/formalizing-the-us-tax-code">Formalizing the US tax code</a> and <a href="https://lexifina.com/blog/one-master-equation-for-all-global-tax">One master equation for all global tax</a>. Commonwealth's implementation is original; no tax model or certification is imported.</p>

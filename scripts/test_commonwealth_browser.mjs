@@ -137,6 +137,39 @@ try{
     assert.match(await page.locator("#warrant-recheck-state").innerText(),/illustrative only/i);
     assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);
 
+    // Exercise the certified legislative model through its actual browser controls.
+    const stress=page.locator("#legislative-stress");
+    assert.equal(await stress.isVisible(),true);
+    assert.equal(await page.locator("#cw-stress-v1-change").innerText(),"−$99");
+    assert.equal(await page.locator("#cw-stress-v2-change").innerText(),"$0");
+    assert.match(await page.locator("#cw-stress-result").innerText(),/1 adjacent decrease/);
+    await page.locator("#cw-stress-date").selectOption("2027-01-01");
+    assert.equal(await page.locator("#cw-stress-v2-active").isVisible(),true);
+    assert.equal(await page.locator("#cw-stress-v1-active").isVisible(),false);
+    assert.match(await page.locator("#cw-stress-result").innerText(),/0 adjacent decrease/);
+    await page.locator("#cw-stress-income").evaluate(el=>{el.value="1001";el.dispatchEvent(new Event("input",{bubbles:true}));});
+    assert.equal(await page.locator("#cw-stress-v1-net").innerText(),"$1,001");
+    assert.equal(await page.locator("#cw-stress-v2-net").innerText(),"$1,100");
+    assert.match(await page.locator("#cw-stress-cost").innerText(),/\$99\./);
+    const downloadPromise=page.waitForEvent("download");
+    await page.locator("#cw-stress-export").click();
+    const download=await downloadPromise;
+    assert.equal(download.suggestedFilename(),"commonwealth-legislative-warrant.json");
+    const downloaded=JSON.parse(await readFile(await download.path(),"utf8"));
+    assert.equal(downloaded.comparison.income,1001);
+    assert.equal(downloaded.comparison.active,"v2");
+    assert.equal(downloaded.comparison.additionalGrant,99);
+    assert.equal(downloaded.authority,"LEGAL_AUTHORITY_NOT_ESTABLISHED");
+    await page.locator("#cw-stress-witness").click();
+    assert.equal(await page.locator("#cw-stress-income").inputValue(),"1000");
+    assert.equal(await page.locator("#cw-stress-date").inputValue(),"2027-01-01");
+    await page.locator("#cw-stress-reset").click();
+    assert.equal(await page.locator("#cw-stress-date").inputValue(),"2026-12-31");
+    assert.equal(await page.locator("#cw-stress-v1-change").innerText(),"−$99");
+    assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+4));
+    await stress.screenshot({path:"browser-artifacts/commonwealth-independent-legislative-"+width+".png"});
+    
     // Four complete civic stages, validation, reset and in-memory-only preference.
     await page.goto(origin+"journey.html",{waitUntil:"load"});
     await page.locator("#cw-next").click();

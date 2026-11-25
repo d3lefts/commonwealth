@@ -235,19 +235,19 @@
     },
     "commonwealth-warrant.html": {
       "source_sha256": "b3e331a474c6b911a4881472eacc53db1167f1bd9574bd3ee82d00d45384bf75",
-      "published_sha256": "8ac713581b9174f2c4548bcec4df81460a08d875335222d66411409d87a40b08",
+      "published_sha256": "ad638d1227c840fe007c3323859a4f8424dc62bf1d301792ed0f784964ca2440",
       "source_repository": "d3lefts/d3lefts",
       "source_ref": "1eac242d5b6250b50ee4d0d05e8e38aaadf08ca9",
       "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth",
-      "independent_site_edit": "2026-11-24: legislative stress test and scoped Lean verification evidence; historical source hash retained."
+      "independent_site_edit": "2026-11-25: side-by-side amendment comparison, scoped local Warrant export and responsive controls; source provenance preserved."
     },
     "commonwealth-warrant.css": {
       "source_sha256": "7ef02ca1ba4f87a84fbf9810c04db1993cd4ea0efa28cb83082d2c241fc05205",
-      "published_sha256": "e6c7cdc2b6d02912cb6836a0230f6c5676ac0c205fa104faa34321c7e76372ee",
+      "published_sha256": "d7b154744ca4aefab4aed4782557d64fadfe5308f4321de9fb5ea009a3a55137",
       "source_repository": "d3lefts/d3lefts",
       "source_ref": "1eac242d5b6250b50ee4d0d05e8e38aaadf08ca9",
       "provenance_scope": "Fictional Warrant legal-evidence interface, independently released by Commonwealth",
-      "independent_site_edit": "2026-11-22: scoped Warrant language, living-voter trade-off bridge, exact replay and privacy boundaries; historical origin SHA retained where applicable."
+      "independent_site_edit": "2026-11-25: side-by-side amendment comparison, scoped local Warrant export and responsive controls; source provenance preserved."
     },
     "commonwealth-warrant.mjs": {
       "source_sha256": "197247b5a51075521719061c8b0b7c19d06bee67b33e1d24b818524e3810b1fe",
@@ -286,9 +286,10 @@
     },
     "commonwealth-legislative-stress.mjs": {
       "source_sha256": "d497d67b341c5092e045b48c4d77ae5dc44cc6483ab5f9a1172b2062c0e8e642",
-      "published_sha256": "d497d67b341c5092e045b48c4d77ae5dc44cc6483ab5f9a1172b2062c0e8e642",
+      "published_sha256": "326aae4ad403653651a352a8160afa3dae49dd563e89ab8d2bb5b399af62ece1",
       "source_repository": "d3lefts/commonwealth",
-      "provenance_scope": "Original fictional Commonwealth legislative stress test; Lexifina contributed research concepts only."
+      "provenance_scope": "Original fictional Commonwealth legislative stress test; Lexifina contributed research concepts only.",
+      "independent_site_edit": "2026-11-25: side-by-side amendment comparison, scoped local Warrant export and responsive controls; source provenance preserved."
     }
   },
   "format": "commonwealth-static-release/v1",
