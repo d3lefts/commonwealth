@@ -39,6 +39,8 @@ jobs:
         run: npm install --no-save --no-package-lock playwright-core@1.56.1
       - name: Independently audit fictional civic budget arithmetic
         run: node scripts/test_civic_tradeoffs.mjs
+      - name: Audit dated legislative stress-test arithmetic
+        run: node scripts/test_legislative_stress.mjs
       - name: Browser-test civic journeys on phone and desktop
         run: |
           CHROME_BIN="$(command -v google-chrome)" \
